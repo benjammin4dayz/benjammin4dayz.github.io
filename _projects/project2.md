@@ -13,7 +13,7 @@ permalink: /roman
   .embed-container {
     max-width: 60vw;
     max-height: 60vh;
-    object-fit: contain;
+    /* object-fit: contain; */
   }
   .twitch-embed {
     overflow: hidden;
@@ -36,7 +36,7 @@ permalink: /roman
     channel: 'roman12663'
   });
 </script> -->
-<div style="padding-bottom: 56.25%; position: relative">
+<div class="embed-container" style="padding-bottom: 56.25%; position: relative">
   <iframe
     style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%"
     src="https://player.twitch.tv/?autoplay=false&channel=roman12663&parent=benjammin4dayz.github.io"
