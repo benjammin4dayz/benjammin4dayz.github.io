@@ -3,10 +3,6 @@ layout: default
 title: About
 ---
 
-<link
-  rel="stylesheet"
-  href="{{ site.url }}{{ site.baseurl }}/assets/css/global.css"
-/>
 <style>
   body {
     min-height: 100vh;
