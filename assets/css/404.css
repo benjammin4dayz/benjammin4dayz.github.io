@@ -1,0 +1,7 @@
+.cat-image {
+  width: 30vw;
+  min-width: 100px;
+  height: 30vh;
+  min-height: 100px;
+  object-fit: contain;
+}
