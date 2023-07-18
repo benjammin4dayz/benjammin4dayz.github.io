@@ -4,7 +4,7 @@ title: Home
 ---
 
 <div class="container">
-  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/index.css/{{ site.github.build_revision }}" />
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/index.css?v={{ site.github.build_revision }}" />
   <h1 class="title text-center">Web Development</h1>
   <span class="subtitle text-center">Select a project to view</span>
   <div class="nav-panel">
