@@ -1,0 +1,135 @@
+---
+layout: default
+title: Survey Form
+permalink: /survey
+---
+
+<html>
+<link rel="stylesheet" href="{{ site.url }}{{ site.baseurl }}/assets/projects/survey.css" />
+    <div class="container">
+      <header class="header">
+        <h1 id="title" class="title text-center">
+          Customer Satisfaction Survey
+        </h1>
+        <p id="description" class="description text-center">
+          Please tell us more about your experience with our brand!
+        </p>
+      </header>
+      <form id="survey-form">
+        <fieldset id="user-contact-information" class="form-group">
+          <legend class="text-center">Contact Information</legend>
+          <label id="name-label" for="name">Name</label>
+          <input type="text" id="name" placeholder="Enter your name" required />
+          <label id="email-label" for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            placeholder="Enter your Email"
+            required
+          />
+          <label id="number-label" for="number">Number <i>(optional)</i></label>
+          <input type="tel" id="number" placeholder="555-123-4567" />
+        </fieldset>
+        <fieldset id="selection" class="form-group">
+          <legend class="text-center">Questionnaire</legend>
+          <label for="dropdown">What is your history with us? </label>
+          <select id="dropdown">
+            <option value="" alt="Select an option">I am a...</option>
+            <option value="new-customer">new customer</option>
+            <option value="former-customer">former customer</option>
+            <option value="frequent-customer">frequent customer</option>
+          </select>
+        </fieldset>
+        <fieldset id="rating" class="form-group">
+          <p>Rate your experience!</p>
+          <label for="rating-best" class="radio-inline">
+            <input
+              type="radio"
+              name="rating"
+              id="rating-best"
+              value="great"
+              class="radio-inline"
+            />
+            Great
+          </label>
+          <label for="rating-good" class="radio-inline">
+            <input
+              type="radio"
+              name="rating"
+              id="rating-good"
+              value="good"
+              class="radio-inline"
+            />
+            Good
+          </label>
+          <label for="rating-average" class="radio-inline">
+            <input
+              type="radio"
+              name="rating"
+              id="rating-average"
+              value="average"
+              class="radio-inline"
+            />
+            Average
+          </label>
+          <label for="rating-poor" class="radio-inline">
+            <input
+              type="radio"
+              name="rating"
+              id="rating-poor"
+              value="poor"
+              class="radio-inline"
+            />
+            Poor
+          </label>
+        </fieldset>
+        <fieldset id="comments" class="form-group">
+          <p>Where can we improve? <i>(check all that apply)</i></p>
+          <label for="communication" class="radio-inline">
+            <input
+              type="checkbox"
+              id="communication"
+              value="communication"
+              class="radio-inline"
+            />
+            Communication
+          </label>
+          <label for="customer-service" class="radio-inline">
+            <input
+              type="checkbox"
+              id="customer-service"
+              value="customer-service"
+              class="radio-inline"
+            />
+            Customer Service
+          </label>
+          <label for="response-time" class="radio-inline">
+            <input
+              type="checkbox"
+              id="response-time"
+              value="response-time"
+              class="radio-inline"
+            />
+            Response Time
+          </label>
+          <label for="other" class="radio-inline">
+            <input
+              type="checkbox"
+              id="other"
+              value="other"
+              class="radio-inline"
+            />
+            Other
+          </label>
+        </fieldset>
+        <fieldset>
+          <label for="comments">Additional comments or concerns</label>
+          <textarea
+            class="longform-text"
+            placeholder="Your thoughts..."
+          ></textarea>
+        </fieldset>
+        <button id="submit" class="submit-btn">Submit</button>
+      </form>
+    </div>
+</html>

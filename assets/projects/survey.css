@@ -1,0 +1,98 @@
+/* @import './../globals.css'; */
+/* Default Styles */
+html,
+body {
+  background-color: #fff;
+  color: #000;
+  font-family: Arial, sans-serif;
+  font-size: 1rem;
+}
+#survey-form {
+  background-color: #4d4d4d;
+}
+/* Light and Dark Overrides */
+html,
+body {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+}
+input,
+select,
+textarea {
+  color: var(--text-color);
+  background-color: var(--tertiary-color);
+}
+*::placeholder {
+  color: var(--text-color);
+}
+#survey-form {
+  color: var(--text-color);
+  background-color: var(--secondary-color);
+}
+/* <--- ---> */
+fieldset {
+  /* PLACEHOLDER - DO NOT INCLUDE IN PROD */
+  border-width: 0px;
+  border-color: orange;
+}
+input,
+select {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 0.7rem;
+}
+p {
+  margin: 0;
+}
+.submit-btn {
+  display: block;
+  margin: auto;
+  margin-top: 1rem;
+  width: 60%;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  /* border-width: 0.2rem; */
+  box-shadow: rgba(0, 0, 0, 0.5) 5px 5px 5px 0;
+  border-radius: 10px;
+  background: var(--tertiary-color);
+  color: var(--text-color);
+}
+button:hover {
+  background: var(--secondary-color);
+}
+button:active {
+  background: var(--tertiary-color);
+}
+
+#survey-form {
+  width: 40%;
+  min-width: 250px;
+  max-width: 600px;
+  margin: auto;
+  margin-bottom: 3vh;
+  padding: 1rem;
+}
+.text-center {
+  text-align: center;
+}
+.radio-inline {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  margin-right: 1rem;
+  padding: 0.2rem 0 0 0;
+  width: inherit;
+}
+.header {
+  margin-top: 1vh;
+  margin-bottom: 3vh;
+}
+.form-group {
+  padding: 0.3rem;
+}
+.longform-text {
+  width: 100%;
+  resize: vertical;
+  padding-bottom: 3rem;
+}
