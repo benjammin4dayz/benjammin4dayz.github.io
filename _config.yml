@@ -24,21 +24,6 @@ description:
 baseurl: '/home' # the subpath of your site, e.g. /blog
 url: 'https://benjammin4dayz.github.io' # the base hostname & protocol for your site, e.g. http://example.com
 
-# Color Scheme
-colors:
-  light:
-    primary_color: '#ffffff'
-    secondary_color: '#e0e0e0'
-    tertiary_color: '#f5f5f5'
-    text_color: '#000000'
-  #    accent_color:
-  dark:
-    primary_color: '#36393f'
-    secondary_color: '#4d4d4d'
-    tertiary_color: '#737373'
-    text_color: '#ebedf0'
-  #    accent_color:
-
 # Contact
 email: your-email@example.com
 twitter_username: benjammin4dayz
