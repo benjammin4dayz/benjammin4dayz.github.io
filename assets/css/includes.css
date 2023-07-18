@@ -14,6 +14,8 @@
 .global-footer {
   align-self: flex-end;
   margin-top: auto;
+  padding: 0.5rem;
+  padding-bottom: 0.1rem;
 }
 .global-header-nav {
   display: grid;
@@ -32,4 +34,15 @@
 .global-header-btn:hover {
   background-color: var(--tertiary-color);
   cursor: pointer;
+}
+
+.made-with-love {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.build-revision {
+  right: 0;
+  font-size: 0.5rem;
+  text-decoration: italic;
 }

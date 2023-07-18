@@ -2,8 +2,13 @@
   rel="stylesheet"
   href="{{ site.baseurl }}{{ project.url }}/assets/css/includes.css"
 />
-<footer class="global-footer overlay">
-  <span class="footer-content text-center">
-    Made with <i class="fas fa-heart"></i> by Benjamin
-  </span>
+<footer class="global-footer overlay text-center">
+  <div class="footer-container">
+    <span class="made-with-love">
+      Made with <i class="fas fa-heart"></i> by Benjamin
+    </span>
+    <span class="build-revision"
+      >build: {{ site.github.build_revision | truncate: 7 }}
+    </span>
+  </div>
 </footer>
