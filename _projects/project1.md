@@ -5,7 +5,7 @@ permalink: /survey
 ---
 
 <html>
-<link rel="stylesheet" href="{{ site.url }}{{ site.baseurl }}/assets/projects/survey.css" />
+<link rel="stylesheet" href="{{ site.url }}{{ site.baseurl }}/assets/projects/survey.css/{{ site.github.build_revision }}" />
     <div class="container">
       <header class="header">
         <h1 id="title" class="title text-center">
