@@ -1,22 +1,24 @@
-<html>
-  <head id="default-head">
+<html lang="en">
+  <head id="layout-head">
     <meta
       charset="utf-8"
       lang="en"
       name="viewport"
       content="width=device-width, initial-scale=1.0"
     />
-
-    <title id="default-title">{{ page.title }} - {{site.title}}</title>
-
+    <meta name="description" content="{{ site.description }}" />
+    <title id="layout-title">{{ page.title }} - {{site.title}}</title>
     <link
-      id="default-styles"
+      id="layout-styles"
       rel="stylesheet"
       href="{{ site.url }}{{ site.baseurl }}/assets/css/global.css"
     />
   </head>
-  <body id="default-body" style="margin: 0; padding: 0">
-    <div style="display: flex; flex-direction: column; height: 100vh">
+  <body id="layout-body" style="margin: 0; padding: 0">
+    <div
+      id="layout-flex-container"
+      style="display: flex; flex-direction: column; height: 100vh"
+    >
       {% include header.html %} {{ content }} {% include footer.html %}
     </div>
   </body>
