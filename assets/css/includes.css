@@ -23,13 +23,13 @@
   margin-left: 66%;
 }
 .global-header-btn {
-  display: inline-block;
   height: 2.5rem;
-  border-radius: 30px;
-  background-color: var(--primary-color);
-  color: var(--text-color);
   border: 3px solid var(--tertiary-color);
+  border-radius: 30px;
+  background-color: var(--secondary-color);
+  color: var(--text-color);
 }
 .global-header-btn:hover {
-  background-color: var(--secondary-color);
+  background-color: var(--tertiary-color);
+  cursor: pointer;
 }

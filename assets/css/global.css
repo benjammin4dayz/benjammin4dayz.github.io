@@ -24,3 +24,8 @@
   background-color: var(--primary-color);
   color: var(--text-color);
 }
+
+.text-center {
+  display: block;
+  text-align: center;
+}
