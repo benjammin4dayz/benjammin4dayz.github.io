@@ -21,7 +21,7 @@
 # Config
 title: freeCodeCamp Projects
 description:
-baseurl: '/fcc-projects' # the subpath of your site, e.g. /blog
+baseurl: '/home' # the subpath of your site, e.g. /blog
 url: 'https://benjammin4dayz.github.io' # the base hostname & protocol for your site, e.g. http://example.com
 
 # Color Scheme
