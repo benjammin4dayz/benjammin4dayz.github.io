@@ -15,7 +15,9 @@
       href="{{ site.url }}{{ site.baseurl }}/assets/css/global.css"
     />
   </head>
-  <body id="default-body">
-    {% include header.html %} {{ content }} {% include footer.html %}
+  <body id="default-body" style="margin: 0; padding: 0">
+    <div style="display: flex; flex-direction: column; height: 100vh">
+      {% include header.html %} {{ content }} {% include footer.html %}
+    </div>
   </body>
 </html>

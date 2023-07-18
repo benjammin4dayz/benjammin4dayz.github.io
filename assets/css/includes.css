@@ -1,0 +1,35 @@
+.overlay {
+  background-color: var(--secondary-color);
+  opacity: 0.77;
+  width: 100%;
+  height: fit-content;
+}
+.global-header {
+  /* TODO: Prevent this from being tucked away when scrolling down */
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  align-self: flex-start;
+}
+.global-footer {
+  align-self: flex-end;
+  margin-top: auto;
+}
+.global-header-nav {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  max-width: 30%;
+  margin-left: 66%;
+}
+.global-header-btn {
+  display: inline-block;
+  height: 2.5rem;
+  border-radius: 30px;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  border: 3px solid var(--tertiary-color);
+}
+.global-header-btn:hover {
+  background-color: var(--secondary-color);
+}
