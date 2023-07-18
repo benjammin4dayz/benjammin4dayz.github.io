@@ -24,6 +24,3 @@ title: Home
     </button>
   </div>
 </div>
-<!-- <script>
-  console.log({{ site.projects | jsonify }});
-</script> -->
