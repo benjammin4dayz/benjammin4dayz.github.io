@@ -16,6 +16,12 @@ title: Home
       {{ project.title }}
     </button>
     {% endfor %}
+    <button
+      class="nav-panel-btn"
+      onclick="window.location.href='{{ site.baseurl }}{{ project.url }}/404';"
+    >
+      404 Example
+    </button>
   </div>
 </div>
 <!-- <script>
