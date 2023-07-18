@@ -1,14 +1,4 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-#
-# If you need help with YAML syntax, here are some quick references for you:
+# YAML Syntax Guide
 # https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
 # https://learnxinyminutes.com/docs/yaml/
 #
@@ -19,8 +9,8 @@
 # in the templates via {{ site.myvariable }}.
 
 # Config
-title: Benjammin4dayz
-description:
+title: Benjammin4dayz # The name of the site
+description: Doing my own web dev. With Blackjack! # The description of the site; this is displayed in search engine results
 baseurl: '/home' # the subpath of your site, e.g. /blog
 url: 'https://benjammin4dayz.github.io' # the base hostname & protocol for your site, e.g. http://example.com
 
@@ -30,6 +20,8 @@ twitter_username: benjammin4dayz
 github_username: benjammin4dayz
 
 # Build settings
+plugins:
+  - 'jekyll-github-metadata'
 collections:
   projects:
     output: true
@@ -37,9 +29,6 @@ collections:
   pages:
     output: true
     permalink: /:path/
-# plugins:
-#   -
-
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
@@ -48,14 +37,16 @@ collections:
 # Excluded items can be processed by explicitly listing the directories or
 # their entries' file path in the `include:` list.
 #
-# exclude:
-#   - .sass-cache/
-#   - .jekyll-cache/
-#   - gemfiles/
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules/
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - .github/
+  - .gitignore
