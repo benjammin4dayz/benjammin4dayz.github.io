@@ -7,12 +7,13 @@ element.handle.addEventListener('click', () => {
 });
 
 const applyDynamicStyles = (element, transitionDuration = 1000) => {
-  ctx = element.style;
-  ctx.color = 'red';
-  ctx.transitionProperty = 'transform';
-  ctx.transitionDuration = transitionDuration + 'ms';
-  ctx.transformOrigin = 'center bottom';
-  ctx.transform = 'translate(0, -3vh) scale(10)';
+  const el = element.style;
+  el.color = 'red';
+  el.cursor = 'cell';
+  el.transitionProperty = 'transform';
+  el.transitionDuration = transitionDuration + 'ms';
+  el.transformOrigin = 'center bottom';
+  el.transform = 'translate(0, -3vh) scale(10)';
 };
 const revealDevButton = () => {
   try {
