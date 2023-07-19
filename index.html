@@ -6,7 +6,7 @@ title: Home
 <div class="container">
   <link
     rel="stylesheet"
-    href="{{ site.baseurl }}/assets/css/index.css?v={{ site.cachebuster }}"
+    href="{{ site.baseurl }}/assets/css/index.css?v={{ site.github.build_revision }}"
   />
   <h1 class="title text-center">Web Development</h1>
   <span class="subtitle text-center">Select a project to view</span>
@@ -14,14 +14,14 @@ title: Home
     {% for project in site.projects %}
     <button
       class="nav-panel-btn"
-      onclick="window.location.href='{{ site.baseurl }}{{ project.url }}'"
+      onclick="window.location.href='{{ site.baseurl }}{{ project.url }}?v={{ site.github.build_revision }}';"
     >
       {{ project.title }}
     </button>
     {% endfor %}
     <button
       class="nav-panel-btn"
-      onclick="window.location.href='{{ site.baseurl }}{{ project.url }}/404';"
+      onclick="window.location.href='{{ site.baseurl }}{{ project.url }}/404?v={{ site.github.build_revision }}';"
     >
       404 Example
     </button>

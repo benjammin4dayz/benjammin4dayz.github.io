@@ -1,18 +1,18 @@
 <link
   rel="stylesheet"
-  href="{{ site.baseurl }}{{ project.url }}/assets/css/includes.css?v={{ site.cachebuster }}"
+  href="{{ site.baseurl }}{{ project.url }}/assets/css/includes.css?v={{ site.github.build_revision }}"
 />
 <header class="global-header overlay">
   <div class="global-header-nav">
     <button
       class="global-header-btn"
-      onclick="window.location.href = '{{ site.baseurl }}/';"
+      onclick="window.location.href = '{{ site.baseurl }}/?v={{ site.github.build_revision }}';"
     >
       Home
     </button>
     <button
       class="global-header-btn"
-      onclick="window.location.href ='{{site.baseurl}}/about';"
+      onclick="window.location.href ='{{site.baseurl}}/about?v={{ site.github.build_revision }}';"
     >
       About
     </button>
