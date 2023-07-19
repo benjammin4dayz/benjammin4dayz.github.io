@@ -37,6 +37,12 @@ title: About
   #hidden-message {
     opacity: 0;
   }
+  .build-revision {
+    display: block;
+    margin-top: 1rem;
+    font-size: 0.7rem;
+    text-decoration: italic;
+  }
 </style>
 <body>
   <div class="container">
@@ -49,7 +55,23 @@ title: About
     >
     <span class="content text-center">
       This site was built using
-      <a href="https://jekyllrb.com/">Jekyll</a>
+      <a href="https://jekyllrb.com/" target="_blank">Jekyll</a>
+      <br />
+      <span class="build-revision">
+        Build Revision: <a href="{{ site.github.repository_url }}/commit/{{ site.github.build_revision }}" target="_blank">{{ site.github.build_revision | truncate: 7, "" }}</a>
+      </span>
+      <i
+        class="fab fa-github"
+        title="Click here to view the source code for this website"
+        onclick="window.open('{{ site.github.repository_url }}')"
+        style="
+          cursor: pointer;
+          font-size: 3rem;
+          margin-top: 1rem;
+          border: 0.5rem solid var(--primary-color);
+          border-radius: 100px;
+        "
+      ></i>
     </span>
   </div>
   <script>
