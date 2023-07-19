@@ -4,23 +4,27 @@ title: Development Panel
 ---
 
 <div class="container">
+  <script src="{{ site.url }}{{ site.baseurl }}/assets/js/cacheHandler.js"></script>
   <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/index.css" />
-  <h1 class="title text-center">Web Development</h1>
-  <span class="subtitle text-center">Select a project to view</span>
+  <h1 class="title text-center">Development Panel</h1>
+  <span class="subtitle text-center">Select an option</span>
   <div class="nav-panel">
     <button
+      id="devBtnOne"
+      class="nav-panel-btn"
+      onclick="purgeCache(); alert('Cache purged!')"
+    >
+      <i class="fas fa-code"></i> Purge Cache
+    </button>
+    <button
+      id="devBtnTwo"
       class="nav-panel-btn"
       onclick="window.location.href='{{ site.url }}{{ site.baseurl }}/PLACEHOLDER'"
     >
       <i class="fas fa-code"></i> Empty
     </button>
     <button
-      class="nav-panel-btn"
-      onclick="window.location.href='{{ site.url }}{{ site.baseurl }}/PLACEHOLDER'"
-    >
-      <i class="fas fa-code"></i> Empty
-    </button>
-    <button
+      id="devBtnThree"
       class="nav-panel-btn"
       onclick="window.location.href='{{ site.url }}{{ site.baseurl }}/PLACEHOLDER'"
     >
