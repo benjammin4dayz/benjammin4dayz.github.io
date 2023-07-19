@@ -7,7 +7,7 @@ title: 404
 <!-- fallback image: https://cdn2.thecatapi.com/images/c2a.jpg -->
 <link
   rel="stylesheet"
-  href="{{ site.url }}{{ site.baseurl }}/assets/css/404.css?v={{ site.github.build_revision }}"
+  href="{{ site.url }}{{ site.baseurl }}/assets/css/404.css?v={{ site.cachebuster }}"
 />
 <body>
   <div class="container">
@@ -21,7 +21,9 @@ title: 404
       </figcaption>
     </figure>
     <h3 class="text-center">page not found</h3>
-    <span class="description text-center">the page you requested does not exist.</span>
+    <span class="description text-center"
+      >the page you requested does not exist.</span
+    >
   </div>
   <script src="{{ site.url }}{{ site.baseurl }}/assets/js/catify.js"></script>
 </body>
