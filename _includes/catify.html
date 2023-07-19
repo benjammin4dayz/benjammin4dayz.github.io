@@ -1,0 +1,25 @@
+<style>
+  .cat-image {
+    width: 30vw;
+    min-width: 100px;
+    height: 30vh;
+    min-height: 100px;
+    object-fit: contain;
+    margin: auto;
+  }
+  .catify-caption {
+    font-size: 0.7rem;
+  }
+</style>
+<div class="catify-container">
+  <figure>
+    <a class="cat-image text-center" href="{{ site.url }}{{ site.baseurl }}/">
+      <img id="catImage" class="cat-image" src="" alt="Random Cat Image" />
+    </a>
+    <figcaption class="catify-caption text-center">
+      Photo provided by
+      <a href="https://thecatapi.com/" target="_blank">The Cat API</a>!
+    </figcaption>
+  </figure>
+</div>
+<script src="{{ site.url }}{{ site.baseurl }}/assets/js/catify.js"></script>
