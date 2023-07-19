@@ -54,14 +54,6 @@ title: About
       >... and hookers!</span
     >
     <span class="content text-center">
-      <span class="build-revision">
-        Build Revision:
-        <a
-          href="{{ site.github.repository_url }}/commit/{{ site.github.build_revision }}"
-          target="_blank"
-          >{{ site.github.build_revision | truncate: 7, "" }}</a
-        >
-      </span>
       <i
         class="fab fa-github"
         title="Click here to view the source code for this website"
@@ -74,6 +66,14 @@ title: About
           border-radius: 100px;
         "
       ></i>
+      <span class="build-revision">
+        Build Revision:
+        <a
+          href="{{ site.github.repository_url }}/commit/{{ site.github.build_revision }}"
+          target="_blank"
+          >{{ site.github.build_revision | truncate: 7, "" }}</a
+        >
+      </span>
     </span>
     <span style="position: relative; top: 40px">
       This site was built with
