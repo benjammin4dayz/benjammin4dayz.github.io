@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Development Panel
+permalink: /private/development
 ---
 
 <div class="container">
@@ -31,4 +32,18 @@ title: Development Panel
       <i class="fas fa-code"></i> Empty
     </button>
   </div>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker
+          .register('{{ site.url }}{{ site.baseurl }}service-worker.js')
+          .then((registration) => {
+            console.log('Service worker registered:', registration);
+          })
+          .catch((error) => {
+            console.log('Service worker registration failed:', error);
+          });
+      });
+    }
+  </script>
 </div>
