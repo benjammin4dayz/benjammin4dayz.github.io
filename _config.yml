@@ -22,6 +22,7 @@ github_username: benjammin4dayz
 # Build settings
 plugins:
   - 'jekyll-github-metadata'
+collections_dir: collections
 collections:
   projects:
     output: true
@@ -29,6 +30,9 @@ collections:
   pages:
     output: true
     permalink: /:path/
+  dev:
+    output: true
+    permalink: /private/development
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
