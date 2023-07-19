@@ -54,11 +54,13 @@ title: About
       >... and hookers!</span
     >
     <span class="content text-center">
-      This site was built using
-      <a href="https://jekyllrb.com/" target="_blank">Jekyll</a>
-      <br />
       <span class="build-revision">
-        Build Revision: <a href="{{ site.github.repository_url }}/commit/{{ site.github.build_revision }}" target="_blank">{{ site.github.build_revision | truncate: 7, "" }}</a>
+        Build Revision:
+        <a
+          href="{{ site.github.repository_url }}/commit/{{ site.github.build_revision }}"
+          target="_blank"
+          >{{ site.github.build_revision | truncate: 7, "" }}</a
+        >
       </span>
       <i
         class="fab fa-github"
@@ -72,6 +74,10 @@ title: About
           border-radius: 100px;
         "
       ></i>
+    </span>
+    <span style="position: relative; top: 40px">
+      This site was built with
+      <a href="https://jekyllrb.com/" target="_blank">Jekyll</a>
     </span>
   </div>
   <script>
