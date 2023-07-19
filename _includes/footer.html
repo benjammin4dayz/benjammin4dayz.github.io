@@ -14,14 +14,16 @@
       ></i>
       by Benjamin
     </span>
+    {% for item in site.dev %}
     <button
       id="devButton"
       class="nav-panel-btn"
-      onclick="window.location.href='{{ site.url }}{{ site.baseurl }}/private/development'"
+      onclick="window.location.href = `{{ item.url }}`"
       style="display: none"
     >
       <i class="fas fa-code"></i>
     </button>
+    {% endfor %}
   </div>
 </footer>
 <script src="{{ site.url }}{{ site.baseurl }}/assets/js/devHeart.js"></script>
