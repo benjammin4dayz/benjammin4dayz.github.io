@@ -50,3 +50,4 @@ exclude:
   - vendor/ruby/
   - .github/
   - .gitignore
+  - _projects/hyde/
