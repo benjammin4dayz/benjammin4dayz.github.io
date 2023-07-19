@@ -11,14 +11,14 @@ title: Home
     {% for project in site.projects %}
     <button
       class="nav-panel-btn"
-      onclick="window.location.href='{{ site.baseurl }}{{ project.url }}';"
+      onclick="window.location.href='{{ site.url }}{{ site.baseurl }}{{ project.url }}';"
     >
       {{ project.title }}
     </button>
     {% endfor %}
     <button
       class="nav-panel-btn"
-      onclick="window.location.href='{{ site.baseurl }}{{ project.url }}/404';"
+      onclick="window.location.href='{{ site.url }}{{ site.baseurl }}/404';"
     >
       404 Example
     </button>
