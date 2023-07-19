@@ -5,7 +5,6 @@ permalink: /private/development
 ---
 
 <div class="container">
-  <script src="{{ site.url }}{{ site.baseurl }}/assets/js/cacheHandler.js"></script>
   <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/index.css" />
   <h1 class="title text-center">Development Panel</h1>
   <span class="subtitle text-center">Select an option</span>
@@ -13,37 +12,23 @@ permalink: /private/development
     <button
       id="devBtnOne"
       class="nav-panel-btn"
-      onclick="purgeCache(); alert('Cache purged!')"
+      onclick="window.location.href='#1'"
     >
-      <i class="fas fa-code"></i> Purge Cache
+      <i class="fas fa-code"></i> Empty
     </button>
     <button
       id="devBtnTwo"
       class="nav-panel-btn"
-      onclick="window.location.href='{{ site.url }}{{ site.baseurl }}/PLACEHOLDER'"
+      onclick="window.location.href='#2'"
     >
       <i class="fas fa-code"></i> Empty
     </button>
     <button
       id="devBtnThree"
       class="nav-panel-btn"
-      onclick="window.location.href='{{ site.url }}{{ site.baseurl }}/PLACEHOLDER'"
+      onclick="window.location.href='#3'"
     >
       <i class="fas fa-code"></i> Empty
     </button>
   </div>
-  <script>
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker
-          .register('{{ site.url }}{{ site.baseurl }}service-worker.js')
-          .then((registration) => {
-            console.log('Service worker registered:', registration);
-          })
-          .catch((error) => {
-            console.log('Service worker registration failed:', error);
-          });
-      });
-    }
-  </script>
 </div>
