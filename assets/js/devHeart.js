@@ -1,8 +1,9 @@
-const devHeart = document.getElementById('devHeart');
-devHeart.addEventListener('click', () => {
-  purgeCache();
-  applyDynamicStyles(devHeart);
-  devHeart.onclick = () => location.reload();
+const element = { isClicked: 0, handle: document.getElementById('devHeart') };
+element.handle.addEventListener('click', () => {
+  !element.isClicked
+    ? (purgeCache(), applyDynamicStyles(element.handle))
+    : location.reload();
+  element.isClicked = !element.isClicked;
 });
 
 const purgeCache = async () => {
