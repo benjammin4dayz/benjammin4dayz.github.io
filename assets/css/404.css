@@ -1,3 +1,8 @@
+h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
 .container {
   min-height: max-content;
   max-width: 60vw;
@@ -8,23 +13,6 @@
   border-radius: 30px;
   box-shadow: 4px 4px 8px 4px var(--secondary-color);
 }
-figcaption {
-  font-size: 0.7rem;
-}
-h3 {
-  margin-top: 0;
-  margin-bottom: 0.5rem;
-}
-
 .description {
   margin-bottom: 1rem;
-}
-
-.cat-image {
-  width: 30vw;
-  min-width: 100px;
-  height: 30vh;
-  min-height: 100px;
-  object-fit: contain;
-  margin: auto;
 }
