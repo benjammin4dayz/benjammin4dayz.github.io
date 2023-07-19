@@ -1,0 +1,52 @@
+<html lang="en">
+  {% include head.html %}
+  <style>
+    .container {
+      min-height: max-content;
+      max-width: 60vw;
+      margin: 5% auto;
+      padding: 0.3rem;
+      border: 3px solid var(--tertiary-color);
+      border-radius: 30px;
+      box-shadow: 4px 4px 8px 4px var(--secondary-color);
+    }
+    .title {
+      padding-bottom: 0;
+      margin-bottom: 0;
+    }
+    .description {
+      font-size: 0.5rem;
+      text-decoration: italic;
+      padding: 0;
+      margin: 0;
+    }
+  </style>
+  <body id="layout-body" style="margin: 0; padding: 0">
+    <div
+      id="layout-flex-container"
+      style="
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        max-height: 100vh;
+      "
+    >
+      {% include header.html %}
+      <div class="container">
+        <h1 class="title text-center" onclick="window.location.assign('/')">
+          The princess is in another castle.
+        </h1>
+        <span class="description text-center"
+          >[ The resource you requested has recently moved elsewhere. ]</span
+        >
+        <h3 class="text-center">Redirecting you now...</h3>
+        <script src="{{ site.url }}{{ site.baseurl }}/assets/js/redirectHandler.js"></script>
+        <script>
+          redirectHandler(5000);
+        </script>
+        {% include catify.html %}
+      </div>
+      {% include footer.html %}
+    </div>
+  </body>
+</html>
