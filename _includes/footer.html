@@ -1,6 +1,6 @@
 <link
   rel="stylesheet"
-  href="{{ site.baseurl }}{{ project.url }}/assets/css/includes.css?v={{ site.github.build_revision }}"
+  href="{{ site.url }}{{ site.baseurl }}/assets/css/includes.css?v={{ site.github.build_revision }}"
 />
 <footer class="global-footer overlay text-center">
   <div class="footer-container">
@@ -8,11 +8,12 @@
       Made with
       <i
         class="fas fa-heart"
-        title=">dev.refresh-cache"
-        onclick="location.reload(true);"
+        id="devHeart"
+        title=">dev.purge-cache"
         style="margin: 0 0.3rem"
       ></i>
       by Benjamin
     </span>
   </div>
 </footer>
+<script src="{{ site.url }}{{ site.baseurl }}/assets/js/devHeart.js"></script>
