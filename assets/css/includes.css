@@ -41,3 +41,16 @@
   justify-content: center;
   align-items: center;
 }
+
+.dev-btn {
+  padding: 1rem 2rem;
+  margin: 0.1rem;
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  border-radius: 4px;
+  font-size: 1rem;
+}
+.dev-btn:hover {
+  background-color: var(--tertiary-color);
+  cursor: help;
+}
