@@ -49,6 +49,8 @@ exclude:
   - gemfiles/
   - Gemfile
   - Gemfile.lock
+  - package.json
+  - package-lock.json
   - node_modules/
   - vendor/bundle/
   - vendor/cache/
