@@ -2,7 +2,7 @@ const element = { isClicked: 0, handle: document.getElementById('devHeart') };
 element.handle.addEventListener('click', () => {
   !element.isClicked
     ? (applyDynamicStyles(element.handle), revealDevButton())
-    : location.reload();
+    : location.reload(true);
   element.isClicked = !element.isClicked;
 });
 
