@@ -30,6 +30,8 @@ collections:
   pages:
     output: true
     permalink: /:path/
+  redirects:
+    output: true
   dev:
     output: true
     permalink: /private/:path/

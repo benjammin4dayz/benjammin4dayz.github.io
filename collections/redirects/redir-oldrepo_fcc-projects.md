@@ -1,5 +1,5 @@
 ---
 layout: redirect
 title: Redirect
-permalink: /home
+permalink: /fcc-projects/
 ---
