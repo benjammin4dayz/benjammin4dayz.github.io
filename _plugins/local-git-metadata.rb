@@ -12,8 +12,8 @@
 #
 # If Git is not available in the environment, default values are used.
 # Default (No Git):
-#    - repository_url: https://github.com/ + repository(as defined in config.yml)
-#    - build_revision: "ERRx404"
+#    - repository_url -> https://github.com/ + github_username (as defined in config.yml)
+#    - build_revision -> "ERRx404"
 #
 # TODO: bundle and build gem-based plugin
 # TODO: use 'git' gem instead of shell environment
@@ -29,51 +29,48 @@ module Jekyll
 
     private
 
-    def plugin_name
-      self.class.name.split("::").last
-    end
-
     def assign_git_values(site)
       say("set missing values") if site.config["github"].nil?
       site.config["github"] ||= {
         "repository_url" => retrieve_git_repository_url(site),
-        "build_revision" => retrieve_git_revision
+        "build_revision" => retrieve_git_revision,
       }
-
     end
 
-    def say(what, tone = nil)
-      put = Jekyll.logger
-      if tone == "err"
-        put.error("[#{plugin_name}]:", what)
-      elsif tone == "warn"
-        put.warn("[#{plugin_name}]:", what)
-      elsif tone == "debug"
-        put.debug("[#{plugin_name}]:", what)
-      else
-        put.info("[#{plugin_name}]:", what)
+    def say(speech, tone = nil)
+      orator = Jekyll.logger
+      voice = self.class.name.split("::").last
+      remark = "[#{voice}]: " + speech
+      case tone
+      when "err" then orator.error(remark)
+      when "warn" then orator.warn(remark)
+      when "debug" then orator.debug(remark)
+      else orator.info(remark)
       end
     end
 
     def retrieve_git_revision
-      begin
-        rev = `git rev-parse HEAD`.strip
-        rev.empty? ? "NO_HEAD" : rev
-      rescue Errno::ENOENT => e
-        say(e, "warn")
-        "ERRx404"
-      end
+      rev = `git rev-parse HEAD`.strip
+      rev.empty? ? "NO_HEAD" : rev
+    rescue Errno::ENOENT => e
+      say(e, "warn")
+      "ERRx404"
+    rescue StandardError => e
+      say(e, "err")
     end
 
     def retrieve_git_repository_url(site)
-      repo_fallback = "https://github.com/" + (site.config["repository"] || "https://github.com/")
-      begin
-        repo_url = `git config --get remote.origin.url`.strip.chomp(".git")
-        repo_url.empty? ? repo_fallback : repo_url
-      rescue Errno::ENOENT => e
-        say(e, "warn")
-        repo_fallback
-      end
+      fallback = (site.config["repository_url"] ||
+                  ("https://github.com/" +
+                   site.config["github_username"]) ||
+                  "").strip
+      url = `git config --get remote.origin.url`.strip.chomp(".git")
+      url.empty? ? fallback : url
+    rescue Errno::ENOENT => e
+      say(e, "warn")
+      fallback
+    rescue StandardError => e
+      say(e, "err")
     end
   end
 end
