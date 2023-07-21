@@ -5,3 +5,4 @@ _site
 vendor
 package*.json
 node_modules
+Gemfile.lock
