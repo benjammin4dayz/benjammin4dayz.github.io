@@ -1,6 +1,6 @@
 ---
 layout: blog
-title: Example Post
+title: Post Template
 permalink: /private/dev/blog
 ---
 
