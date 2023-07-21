@@ -1,9 +1,6 @@
 <html lang="en">
   {% include head.html %}
   <style>
-    html {
-      max-height: 100vh;
-    }
     .layout-flex-container {
       display: flex;
       flex-direction: column;
@@ -13,7 +10,10 @@
       max-width: min-content;
     }
     .content {
-      margin: 0 1rem 0 0.1rem;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      margin: 0 auto;
       overflow: auto;
     }
   </style>
@@ -21,7 +21,7 @@
     <div class="layout-flex-container">
       <!-- Layout Wrapper -->
       {% include header.html %}
-      <div style="display: flex; height: 100vh">
+      <div class="content-container" style="display: flex; height: 100vh">
         <div class="sidebar">{% include sidebar-nav.html %}</div>
         <!-- Blog Content Wrapper -->
         <div class="content">

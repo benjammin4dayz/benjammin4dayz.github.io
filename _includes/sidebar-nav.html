@@ -3,28 +3,34 @@
   <head>
     <style>
       .blog-navbar {
+        width: max-content;
         background-color: var(--secondary-color);
         opacity: 0.88;
-        z-index: 999;
       }
       .blog-navbar-content {
-        max-width: fit-content;
+        display: flex;
+        flex-direction: column;
+        margin-top: 10%;
+      }
+      .suggested-posts {
+        margin: auto;
+        margin-left: 10px;
+        padding: 0.1rem;
       }
     </style>
   </head>
   <body>
     <!-- Left Navbar -->
-    <div class="blog-navbar">
+    <div class="blog-navbar text-center">
+      Explore
       <div class="blog-navbar-content">
-        LEFT NAVBAR PLACEHOLDER----------------------
-        <br />
-        Other Blogs:
-        <br />
-        <li class="suggested-posts" style="margin: 0.1rem">
+        <ul class="suggested-posts">
           {% for blog in site.blog %}
-          <a href="{{ blog.url }}">{{ blog.title }}</a>
+          <li class="suggested-posts">
+            <a href="{{ blog.url }}">{{ blog.title }}</a>
+          </li>
           {% endfor %}
-        </li>
+        </ul>
       </div>
     </div>
   </body>
