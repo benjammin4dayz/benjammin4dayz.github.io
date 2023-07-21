@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .blog-navbar {
+        background-color: var(--secondary-color);
+        opacity: 0.88;
+        z-index: 999;
+      }
+      .blog-navbar-content {
+        max-width: fit-content;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Left Navbar -->
+    <div class="blog-navbar">
+      <div class="blog-navbar-content">
+        LEFT NAVBAR PLACEHOLDER----------------------
+        <br />
+        Other Blogs:
+        <br />
+        <li class="suggested-posts" style="margin: 0.1rem">
+          {% for blog in site.blog %}
+          <a href="{{ blog.url }}">{{ blog.title }}</a>
+          {% endfor %}
+        </li>
+      </div>
+    </div>
+  </body>
+</html>

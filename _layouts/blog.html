@@ -1,0 +1,40 @@
+<html lang="en">
+  {% include head.html %}
+  <style>
+    html {
+      max-height: 100vh;
+    }
+    .layout-flex-container {
+      display: flex;
+      flex-direction: column;
+    }
+    .sidebar {
+      display: flex;
+      max-width: min-content;
+    }
+    .content {
+      margin: 0 1rem 0 0.1rem;
+      overflow: auto;
+    }
+  </style>
+  <body id="layout-body" style="margin: 0; padding: 0">
+    <div class="layout-flex-container">
+      <!-- Layout Wrapper -->
+      {% include header.html %}
+      <div style="display: flex; height: 100vh">
+        <div class="sidebar">{% include sidebar-nav.html %}</div>
+        <!-- Blog Content Wrapper -->
+        <div class="content">
+          <h1 class="blog-title text-center">
+            {{ page.title }}
+            <hr />
+          </h1>
+          {{ content }}
+        </div>
+        <!-- Blog Content Wrapper End -->
+      </div>
+      {% include footer.html %}
+      <!-- Layout Wrapper End -->
+    </div>
+  </body>
+</html>
