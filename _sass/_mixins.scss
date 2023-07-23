@@ -1,0 +1,25 @@
+@mixin setTheme($theme) {
+  :root {
+    @each $key, $value in $theme {
+      --#{$key}: #{$value};
+    }
+  }
+}
+
+// Animations
+@mixin header-btn-animation {
+  @keyframes rock {
+    0% {
+      transform: rotate(0deg);
+    }
+    25% {
+      transform: rotate(-2deg);
+    }
+    50% {
+      transform: rotate(2deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+}

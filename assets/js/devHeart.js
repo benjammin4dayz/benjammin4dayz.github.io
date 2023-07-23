@@ -1,25 +1,51 @@
 const element = { isClicked: 0, handle: document.getElementById('devHeart') };
-element.handle.addEventListener('click', () => {
-  !element.isClicked
-    ? (applyDynamicStyles(element.handle), revealDevButton())
-    : location.reload(true);
-  element.isClicked = !element.isClicked;
-});
+const errList = [];
+try {
+  // Add a click listener to the initial element
+  element.handle.addEventListener('click', () => {
+    !element.isClicked
+      ? (applyDynamicStyles(element.handle), armDevButton())
+      : location.reload(true);
+    element.isClicked = !element.isClicked;
+  });
+} catch (e) {
+  console.error(
+    `The requested element id 'devHeart' does not exist within the page.`
+  );
+}
 
-const applyDynamicStyles = (element, transitionDuration = 1000) => {
-  const el = element.style;
-  el.color = 'red';
+const applyDynamicStyles = (element, transitionDuration = 5000) => {
+  // Set parent element initial styles
+  element.style.color = 'red';
+  element.style.transitionProperty = 'transform';
+  element.style.transitionDuration = transitionDuration + 'ms';
+  // Clone the element and then append it to the body
+  const clonedElement = element.cloneNode(true);
+  document.body.appendChild(clonedElement);
+  // Style the cloned element without affecting our page layout
+  const el = clonedElement.style;
+  el.position = 'absolute';
+  el.top = '100%';
+  el.left = '50%';
+  el.zIndex = '999';
   el.cursor = 'cell';
-  el.transitionProperty = 'transform';
-  el.transitionDuration = transitionDuration + 'ms';
-  el.transformOrigin = 'center bottom';
-  el.transform = 'translate(0, -3vh) scale(10)';
+  // Wait a small amount of time before applying transforms to prevent pop-in
+  wait(10).then(() => {
+    clonedElement.onclick = () => location.reload(true);
+    el.transformOrigin = 'center bottom';
+    el.transform = 'translate(0, -15vh) scale(20)';
+  });
 };
-const revealDevButton = () => {
+const armDevButton = () => {
   try {
-    document.getElementById('devPanel').style.visibility = 'visible';
-  } catch {}
-  try {
-    document.getElementById('devButton').style.display = 'inline-block';
-  } catch {}
+    const node = document.getElementById('devButton');
+    node.onclick = () => (window.location.href = '/private/dev-panel');
+    node.style.backgroundColor = 'orange';
+  } catch {
+    errList.push("element 'devButton' not found");
+  }
 };
+if (errList.length) console.warn('Error(s) occurred:\n -' + e.join('\n -'));
+
+const wait = (milliseconds) =>
+  new Promise((resolve) => setTimeout(resolve, milliseconds));

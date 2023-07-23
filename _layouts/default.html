@@ -1,16 +1,63 @@
-<html lang="en">
+<!DOCTYPE html>
+<html>
   {% include head.html %}
-  <body id="layout-body" style="margin: 0; padding: 0">
-    <div
-      id="layout-flex-container"
-      style="
-        display: flex;
-        flex-direction: column;
-        height: 100vh;
-        max-height: 100vh;
-      "
-    >
-      {% include header.html %} {{ content }} {% include footer.html %}
+  <body>
+    <div class="main-flex-container body-color">
+      <div class="header-container endcap-color">
+        <span class="header-nav-container">
+          <button class="header-nav-btn" onclick="window.location.href = '/'">
+            Home
+          </button>
+          <button
+            class="header-nav-btn"
+            onclick="window.location.href = '/about'"
+          >
+            About
+          </button>
+          <button
+            class="header-nav-btn"
+            onclick="window.location.href = '/blog'"
+          >
+            Blog
+          </button>
+          <button
+            id="devButton"
+            class="header-nav-btn"
+            onclick="alert(`(ㆆ _ ㆆ)`)"
+          >
+            DO NOT CLICK
+          </button>
+        </span>
+      </div>
+      <div class="body-container">
+        <span class="body-content">{{ content }} </span>
+      </div>
+      <div class="footer-container endcap-color">
+        <div class="footer-content">
+          <span
+            id="leftFoot"
+            class="footer-flex-fill left-foot"
+            style="height: min-content"
+          >
+            <p
+              title="This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License."
+              class="condense imprint"
+            >
+              &copy; 2023 Jam. Some rights reserved.
+            </p>
+            <p class="condense imprint">
+              <a title="Check back later..">Terms of Service</a> |
+              <a title="I do not collect any data :)">Privacy Policy</a>
+            </p>
+          </span>
+          <span id="centerFoot" class="footer-flex-fill no-shrink text-center"
+            >Made with <i id="devHeart" class="fas fa-heart text-center"></i> by
+            Jam
+          </span>
+          <span id="rightFoot" class="footer-flex-fill text-center"></span>
+        </div>
+      </div>
     </div>
+    <script src="{{ site.baseurl }}/assets/js/devHeart.js"></script>
   </body>
 </html>

@@ -22,17 +22,20 @@ github_username: benjammin4dayz
 # Build settings
 plugins:
   - 'jekyll-github-metadata'
+sass:
+  sass_dir: _sass
+  style: compressed
 collections_dir: collections
 collections:
   projects:
     output: true
     permalink: /projects/:path/
-  pages:
+  pages: # Entry file for collections or any other custom page
     output: true
     permalink: /:path/
   blog:
     output: true
-    permalink: /blog/:path/
+    permalink: /blog/post/:path/
   dev:
     output: true
     permalink: /private/:path/

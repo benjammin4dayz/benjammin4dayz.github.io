@@ -3,56 +3,12 @@ layout: default
 title: About
 ---
 
-<style>
-  body {
-    min-height: 100vh;
-  }
-  .container {
-    background-color: var(--secondary-color);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0 auto;
-    margin-top: 5vh;
-    max-width: 33vw;
-    padding: 3rem 6rem;
-    box-shadow: 2px 2px 25px rgba(46, 45, 45, 0.3),
-      -2px -2px 25px rgba(134, 129, 129, 0.3);
-    border-radius: 30px;
-  }
-  .heading {
-    font-size: 3rem;
-    text-decoration: bold;
-    margin-bottom: 1rem;
-  }
-  .sub-heading {
-    font-size: 1.5rem;
-    margin-bottom: 5vh;
-  }
-  .sotto-voce {
-    font-size: 0.5rem;
-    font-style: italic;
-  }
-  #hidden-message {
-    opacity: 0;
-  }
-  .build-revision {
-    display: block;
-    margin-top: 1rem;
-    font-size: 0.7rem;
-    text-decoration: italic;
-  }
-</style>
-<body>
+<div class="about-page">
   <div class="container">
-    <span class="heading text-center">Doing my own webdev.</span>
-    <span id="hidden-message-trigger" class="sub-heading text-center"
-      >With Blackjack!</span
-    >
-    <span id="hidden-message" class="sotto-voce text-center"
-      >... and hookers!</span
-    >
-    <span class="content text-center">
+    <span class="heading">Doing my own webdev.</span>
+    <span id="hidden-message-trigger" class="sub-heading">With Blackjack!</span>
+    <span id="hidden-message" class="sotto-voce">... and hookers!</span>
+    <div class="build-info">
       <i
         class="fab fa-github"
         title="Click here to view the source code for this website"
@@ -60,12 +16,12 @@ title: About
         style="
           cursor: pointer;
           font-size: 3rem;
-          margin-top: 1rem;
+          margin: auto;
           border: 0.5rem solid var(--primary-color);
           border-radius: 100px;
         "
       ></i>
-      <span class="build-revision">
+      <span class="build-info">
         Build Revision:
         <a
           title="Git commit history"
@@ -74,16 +30,16 @@ title: About
           >{{ site.github.build_revision | truncate: 7, "" }}</a
         >
       </span>
-    </span>
-    <span style="position: relative; top: 40px">
-      This site was built with
-      <a
-        title="Click here to learn more about Jekyll"
-        href="https://jekyllrb.com/"
-        target="_blank"
-        >Jekyll</a
-      >
-    </span>
+      <span class="build-info">
+        Built with
+        <a
+          title="Click here to learn more about Jekyll"
+          href="https://jekyllrb.com/"
+          target="_blank"
+          >Jekyll</a
+        >
+      </span>
+    </div>
   </div>
   <script>
     function revealHiddenOnHover() {
@@ -98,4 +54,4 @@ title: About
     }
     revealHiddenOnHover();
   </script>
-</body>
+</div>

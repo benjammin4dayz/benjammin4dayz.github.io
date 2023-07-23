@@ -1,0 +1,42 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.body-container {
+  display: flex;
+  flex: 0.93 0 0;
+  justify-content: center;
+  align-items: center;
+  margin: 4rem 3.2rem 4rem 3.2rem;
+}
+
+.body-content {
+  display: flex;
+  flex-wrap: wrap;
+  word-break: break-word;
+  padding: 0 1.5rem;
+  align-self: flex-start;
+}
+
+.main-flex-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: auto;
+}
+
+.body-color {
+  background-color: var(--primary-color);
+}
+
+.endcap-color {
+  background-color: var(--secondary-color);
+}
+
+.text-center {
+  text-align: center;
+}

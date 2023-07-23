@@ -1,0 +1,16 @@
+<html lang="en">
+  {% include head.html %}
+  <body id="layout-body" style="margin: 0; padding: 0">
+    <div
+      id="layout-flex-container"
+      style="
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        max-height: 100vh;
+      "
+    >
+      {% include header.html %} {{ content }} {% include footer.html %}
+    </div>
+  </body>
+</html>

@@ -1,0 +1,20 @@
+<script src="{{ site.baseurl }}/assets/js/depNotice.js">
+  /*
+  ===========================================
+  ...........................................
+  -------------------------------------------
+  ========!@#! UPDATE THIS PAGE !#@!=========
+  -------------------------------------------
+  ...........................................
+  ===========================================
+  */
+</script>
+<script>
+  // use `deprecated.notifSent = true` to squelch the alert window
+  console.warn(
+    'Deprecation Warning: user experience may be severely diminished.'
+  );
+  window.onload = () => {
+    deprecated.notifSent = doOnLoad(deprecated.notifSent);
+  };
+</script>

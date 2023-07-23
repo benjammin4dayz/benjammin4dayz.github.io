@@ -1,0 +1,21 @@
+$theme-light: (
+  primary-color: #ffffff,
+  secondary-color: #e0e0e0,
+  tertiary-color: #f5f5f5,
+  text-color: #000000,
+  accent-color: rgb(218, 146, 14)
+);
+$theme-dark: (
+  primary-color: #36393f,
+  secondary-color: #4d4d4d,
+  tertiary-color: #737373,
+  text-color: #ebedf0,
+  accent-color: rgb(218, 146, 14)
+);
+
+// Overrides
+// $primary-color: #36393f;
+// $secondary-color: #4d4d4d;
+// $tertiary-color: #737373;
+// $text-color: #ebedf0;
+// $accent-color: rgb(218, 146, 14);

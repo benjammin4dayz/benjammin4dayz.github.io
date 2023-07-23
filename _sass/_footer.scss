@@ -1,0 +1,35 @@
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  flex: 0.01 1 auto;
+  align-self: flex-end;
+  justify-content: center;
+  width: 100%;
+
+  .footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 3rem;
+  }
+  .footer-flex-fill {
+    flex: 1 0 0;
+  }
+  .no-shrink {
+    flex-shrink: 0;
+  }
+  .condense {
+    font-size: 0.6rem;
+    margin: 0;
+    padding: 0;
+    max-width: fit-content;
+    opacity: 0.66;
+  }
+  .imprint:hover {
+    // filter: blur(2px);
+    // transition: filter 3s ease;
+    transition: opacity 0.3s ease;
+    opacity: 1;
+    border-bottom: 0.05rem solid var(--accent-color);
+  }
+}

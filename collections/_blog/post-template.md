@@ -1,10 +1,10 @@
 ---
 layout: blog
 title: Post Template
-permalink: /private/dev/blog
 ---
 
 {::comment}Kramdown Syntax Documentation: https://kramdown.gettalong.org/syntax.html{:/comment}
+<span style="display: block;">
 
 #### <center> Headings
 

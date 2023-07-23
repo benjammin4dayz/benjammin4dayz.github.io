@@ -3,31 +3,32 @@ layout: default
 title: Development Panel
 ---
 
-<div class="container">
-  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/index.css" />
-  <h1 class="title text-center">Development Panel</h1>
-  <span class="subtitle text-center">Select an option</span>
-  <div class="nav-panel">
-    <button
-      id="devBtnOne"
-      class="nav-panel-btn"
-      onclick="window.location.href='/private/dev/blog'"
-    >
-      <i class="fas fa-code"></i> Blog (WIP)
-    </button>
-    <button
-      id="devBtnTwo"
-      class="nav-panel-btn"
-      onclick="window.location.href='#2'"
-    >
-      <i class="fas fa-code"></i> Empty
-    </button>
-    <button
-      id="devBtnThree"
-      class="nav-panel-btn"
-      onclick="window.open('https:\\benjammin4dayz.github.io')"
-    >
-      <i class="fas fa-code"></i> Goto Prod
-    </button>
+<div class="index-page">
+  <div class="container">
+    <h1 class="title text-center">Development Panel</h1>
+    <span class="subtitle text-center">Select an option</span>
+    <div class="nav-panel">
+      <button
+        id="devBtnOne"
+        class="nav-panel-btn"
+        onclick="window.location.href='{{ site.url }}/blog/post'"
+      >
+        <i class="fas fa-code"></i> Posts
+      </button>
+      <button
+        id="devBtnTwo"
+        class="nav-panel-btn"
+        onclick="window.location.href='#2'"
+      >
+        <i class="fas fa-code"></i> Empty
+      </button>
+      <button
+        id="devBtnThree"
+        class="nav-panel-btn"
+        onclick="window.open('https:\\benjammin4dayz.github.io')"
+      >
+        <i class="fas fa-code"></i> Goto Prod
+      </button>
+    </div>
   </div>
 </div>

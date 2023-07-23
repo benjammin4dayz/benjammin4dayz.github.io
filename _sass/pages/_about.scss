@@ -1,0 +1,47 @@
+.about-page {
+  .container {
+    background-color: var(--secondary-color);
+    width: fit-content;
+    height: fit-content;
+    margin: 0 auto;
+    padding: 1rem;
+    box-shadow: 2px 2px 25px rgba(46, 45, 45, 0.3),
+      -2px -2px 25px rgba(134, 129, 129, 0.3);
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+
+    .heading {
+      font-size: 3rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    .sub-heading {
+      font-size: 1.5rem;
+      margin-bottom: 5vh;
+      text-align: center;
+    }
+
+    .sotto-voce {
+      font-size: 0.5rem;
+      font-style: italic;
+      text-align: center;
+      padding-bottom: 1rem;
+    }
+
+    #hidden-message {
+      opacity: 0;
+    }
+
+    .build-info {
+      display: block;
+      margin-top: 1rem;
+      font-size: 0.7rem;
+      text-decoration: italic;
+      text-align: center;
+    }
+  }
+}
