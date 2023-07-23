@@ -1,3 +1,5 @@
+@charset "utf-8";
+
 @mixin setTheme($theme) {
   :root {
     @each $key, $value in $theme {

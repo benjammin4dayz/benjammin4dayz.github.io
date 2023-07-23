@@ -23,8 +23,9 @@ github_username: benjammin4dayz
 plugins:
   - 'jekyll-github-metadata'
 sass:
-  sass_dir: _sass
   style: compressed
+  load_paths:
+    - _sass/pages
 collections_dir: collections
 collections:
   projects:

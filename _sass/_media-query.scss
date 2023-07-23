@@ -1,3 +1,5 @@
+@charset "utf-8";
+
 @media (prefers-color-scheme: light) {
   @include setTheme($theme-light);
 }

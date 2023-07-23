@@ -1,3 +1,6 @@
+---
+---
+
 /** FontAwesome Fonts */
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
 /** ! Important ! */
@@ -5,7 +8,7 @@
 /** Layout */
 @import 'media-query', 'main-layout', 'header', 'footer';
 /** Site Pages */
-@import 'pages/index', 'pages/about';
+@import 'index', 'about';
 
 /** TODO: Remove this */
 .text-center {
