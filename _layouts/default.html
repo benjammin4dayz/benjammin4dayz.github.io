@@ -1,20 +1,29 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   {% include head.html %}
   <body>
     <div class="main-flex-container body-color">
       <div class="header-container endcap-color">
-        <span class="header-nav-container">
-          <button class="header-nav-btn" onclick="window.location.href = '/'">
+        <div class="header-nav-container">
+          <button
+            aria-label="Navigate to page - Home"
+            tabindex="0"
+            class="header-nav-btn"
+            onclick="window.location.href = '/'"
+          >
             Home
           </button>
           <button
+            aria-label="Navigate to page - About"
+            tabindex="0"
             class="header-nav-btn"
             onclick="window.location.href = '/about'"
           >
             About
           </button>
           <button
+            aria-label="Navigate to page - Blog"
+            tabindex="0"
             class="header-nav-btn"
             onclick="window.location.href = '/blog'"
           >
@@ -27,10 +36,10 @@
           >
             DO NOT CLICK
           </button>
-        </span>
+        </div>
       </div>
       <div class="body-container">
-        <span class="body-content">{{ content }} </span>
+        <span class="body-content">{{ content }}</span>
       </div>
       <div class="footer-container endcap-color">
         <div class="footer-content">
