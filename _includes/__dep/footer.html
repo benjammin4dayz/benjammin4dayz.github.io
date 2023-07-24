@@ -1,0 +1,26 @@
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/includes.css" />
+<footer class="global-footer overlay text-center">
+  <div class="footer-container">
+    <span class="made-with-love">
+      Made with
+      <i
+        class="fas fa-heart"
+        id="devHeart"
+        title=">dev.purge-cache"
+        style="margin: 0 0.3rem"
+      ></i>
+      by Benjamin
+    </span>
+    {% for item in site.dev %}
+    <button
+      id="devButton"
+      class="dev-btn"
+      onclick="window.location.href = `{{ item.url }}`"
+      style="display: none"
+    >
+      <i class="fas fa-code"></i>
+    </button>
+    {% endfor %}
+  </div>
+</footer>
+<script src="{{ site.baseurl }}/assets/js/devHeart.js"></script>

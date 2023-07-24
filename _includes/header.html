@@ -1,20 +1,31 @@
-<link
-  rel="stylesheet"
-  href="{{ site.baseurl }}{{ project.url }}/assets/css/includes.css"
-/>
-<header class="global-header overlay">
-  <div class="global-header-nav">
+<div class="header-container endcap-color">
+  <div class="header-nav-container">
     <button
-      class="global-header-btn"
-      onclick="window.location.href = '{{ site.baseurl }}/';"
+      aria-label="Navigate to page - Home"
+      tabindex="0"
+      class="header-nav-btn"
+      onclick="window.location.href = '/'"
     >
       Home
     </button>
     <button
-      class="global-header-btn"
-      onclick="window.location.href ='{{site.baseurl}}/about';"
+      aria-label="Navigate to page - About"
+      tabindex="0"
+      class="header-nav-btn"
+      onclick="window.location.href = '/about'"
     >
       About
     </button>
+    <button
+      aria-label="Navigate to page - Blog"
+      tabindex="0"
+      class="header-nav-btn"
+      onclick="window.location.href = '/blog'"
+    >
+      Blog
+    </button>
+    <button id="devButton" class="header-nav-btn" onclick="alert(`(ㆆ _ ㆆ)`)">
+      DO NOT CLICK
+    </button>
   </div>
-</header>
+</div>

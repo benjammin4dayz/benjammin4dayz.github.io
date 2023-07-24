@@ -3,79 +3,11 @@
   {% include head.html %}
   <body>
     <div class="main-flex-container body-color">
-      <div class="header-container endcap-color">
-        <div class="header-nav-container">
-          <button
-            aria-label="Navigate to page - Home"
-            tabindex="0"
-            class="header-nav-btn"
-            onclick="window.location.href = '/'"
-          >
-            Home
-          </button>
-          <button
-            aria-label="Navigate to page - About"
-            tabindex="0"
-            class="header-nav-btn"
-            onclick="window.location.href = '/about'"
-          >
-            About
-          </button>
-          <button
-            aria-label="Navigate to page - Blog"
-            tabindex="0"
-            class="header-nav-btn"
-            onclick="window.location.href = '/blog'"
-          >
-            Blog
-          </button>
-          <button
-            id="devButton"
-            class="header-nav-btn"
-            onclick="alert(`(ㆆ _ ㆆ)`)"
-          >
-            DO NOT CLICK
-          </button>
-        </div>
-      </div>
+      {% include header.html %}
       <div class="body-container">
         <span class="body-content">{{ content }}</span>
       </div>
-      <div class="footer-container endcap-color">
-        <div class="footer-content">
-          <span
-            id="leftFoot"
-            class="footer-flex-fill left-foot"
-            style="height: min-content"
-          >
-            <p
-              title="This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License."
-              class="condense imprint"
-            >
-              <a
-                rel="license"
-                href="http://creativecommons.org/licenses/by-nc/4.0/"
-                target="_blank"
-                >&copy; 2023 Jam. Some rights reserved.</a
-              >
-            </p>
-            <p class="condense imprint">
-              <a title="Check back later..">Terms of Service</a> |
-              <a
-                title="I do not collect any data :)"
-                href="{{ site.baseurl }}/privacy-policy"
-                >Privacy Policy</a
-              >
-            </p>
-          </span>
-          <span id="centerFoot" class="footer-flex-fill no-shrink text-center"
-            >Made with <i id="devHeart" class="fas fa-heart text-center"></i> by
-            Jam
-          </span>
-          <span id="rightFoot" class="footer-flex-fill text-center"></span>
-          <script src="{{ site.baseurl }}/assets/js/devHeart.js"></script>
-        </div>
-      </div>
+      {% include footer.html %}
     </div>
   </body>
 </html>

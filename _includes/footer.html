@@ -1,26 +1,34 @@
-<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/includes.css" />
-<footer class="global-footer overlay text-center">
-  <div class="footer-container">
-    <span class="made-with-love">
-      Made with
-      <i
-        class="fas fa-heart"
-        id="devHeart"
-        title=">dev.purge-cache"
-        style="margin: 0 0.3rem"
-      ></i>
-      by Benjamin
-    </span>
-    {% for item in site.dev %}
-    <button
-      id="devButton"
-      class="dev-btn"
-      onclick="window.location.href = `{{ item.url }}`"
-      style="display: none"
+<div class="footer-container endcap-color">
+  <div class="footer-content">
+    <span
+      id="leftFoot"
+      class="footer-flex-fill left-foot"
+      style="height: min-content"
     >
-      <i class="fas fa-code"></i>
-    </button>
-    {% endfor %}
+      <p
+        title="This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License."
+        class="condense imprint"
+      >
+        <a
+          rel="license"
+          href="http://creativecommons.org/licenses/by-nc/4.0/"
+          target="_blank"
+          >&copy; 2023 Jam. Some rights reserved.</a
+        >
+      </p>
+      <p class="condense imprint">
+        <a title="Check back later..">Terms of Service</a> |
+        <a
+          title="I do not collect any data :)"
+          href="{{ site.baseurl }}/privacy-policy"
+          >Privacy Policy</a
+        >
+      </p>
+    </span>
+    <span id="centerFoot" class="footer-flex-fill no-shrink text-center"
+      >Made with <i id="devHeart" class="fas fa-heart text-center"></i> by Jam
+    </span>
+    <span id="rightFoot" class="footer-flex-fill text-center"></span>
+    <script src="{{ site.baseurl }}/assets/js/devHeart.js"></script>
   </div>
-</footer>
-<script src="{{ site.baseurl }}/assets/js/devHeart.js"></script>
+</div>
