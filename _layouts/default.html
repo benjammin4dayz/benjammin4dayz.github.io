@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
   {% include head.html %}
-  <body>
-    <div class="main-flex-container body-color">
+  <body class="body-color">
+    <div class="main-flex">
       {% include header.html %}
-      <div class="body-container">
-        <span class="body-content">{{ content }}</span>
-      </div>
+      <div class="body-container">{{ content }}</div>
       {% include footer.html %}
     </div>
   </body>

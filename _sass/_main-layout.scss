@@ -13,18 +13,18 @@ body {
   flex: 0.93 0 0;
   justify-content: center;
   align-items: center;
-  margin: 4rem 3.2rem 4rem 3.2rem;
+  // margin: 4rem 3.2rem 4rem 3.2rem;
 }
 
-.body-content {
-  display: flex;
-  flex-wrap: wrap;
-  word-break: break-word;
-  padding: 0 1.5rem;
-  align-self: flex-start;
-}
+// .body-content {
+//   display: flex;
+//   flex-wrap: wrap;
+//   word-break: break-word;
+//   padding: 0 1.5rem;
+//   align-self: flex-start;
+// }
 
-.main-flex-container {
+.main-flex {
   display: flex;
   flex-direction: column;
   height: 100vh;
