@@ -8,6 +8,13 @@
   }
 }
 
+@mixin assumeRootColor {
+  :root {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+  }
+}
+
 // Animations
 @mixin header-btn-animation {
   @keyframes rock {

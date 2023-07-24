@@ -21,19 +21,21 @@ const applyDynamicStyles = (element, transitionDuration = 5000) => {
   element.style.transitionDuration = transitionDuration + 'ms';
   // Clone the element and then append it to the body
   const clonedElement = element.cloneNode(true);
-  document.body.appendChild(clonedElement);
+  document.documentElement.appendChild(clonedElement);
   // Style the cloned element without affecting our page layout
   const el = clonedElement.style;
   el.position = 'absolute';
-  el.top = '100%';
-  el.left = '50%';
+  el.top = '96.3%';
+  el.left = '49.53%';
   el.zIndex = '999';
   el.cursor = 'cell';
   // Wait a small amount of time before applying transforms to prevent pop-in
   wait(10).then(() => {
     clonedElement.onclick = () => location.reload(true);
-    el.transformOrigin = 'center bottom';
-    el.transform = 'translate(0, -15vh) scale(20)';
+    el.maxHeight = 'min-content';
+    el.maxWidth = 'min-content';
+    el.transformOrigin = 'bottom';
+    el.transform = 'translate(0, -15vh) scale(15)';
   });
 };
 const armDevButton = () => {
