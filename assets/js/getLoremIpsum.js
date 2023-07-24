@@ -3,6 +3,8 @@
  * most if not all of the processing logic that I've implemented here. However,
  * in the spirit of over-engineering solutions and reinventing wheels, I decided to continue.
  *
+ * Thanks to https://corsproxy.io/ for the quick and painless solution to CORS restrictions
+ *
  */
 let activeIpsumContainer;
 const elById = (id) => document.getElementById(id);
@@ -174,7 +176,7 @@ const getPlaceholderText = (p, pLen, ...flags) => {
 };
 // Send a GET request to the API
 const apiQuery = (args) => {
-  const api = 'https://loripsum.net/api';
+  const api = 'https://corsproxy.io/?https://loripsum.net/api';
   if (!args)
     return fetch(api)
       .then((response) => response.text())
