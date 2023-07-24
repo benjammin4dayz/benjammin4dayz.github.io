@@ -6,3 +6,12 @@
   background-color: #fff;
   color: #000;
 }
+/* CSS */
+:root {
+  font-family: 'Inter', sans-serif;
+}
+@supports (font-variation-settings: normal) {
+  :root {
+    font-family: 'Inter var', sans-serif;
+  }
+}

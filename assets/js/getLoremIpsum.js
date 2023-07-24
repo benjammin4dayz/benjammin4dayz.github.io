@@ -84,7 +84,7 @@ const configureLoremGenerator = (div, button, textinput, exit) => {
 
   button.id = 'loremButton';
   const bs = button.style;
-  button.textContent = 'Lorem Ipsum\n>Generate<';
+  button.textContent = 'Loripsum API\n>Generate<';
   bs.color = 'var(--text-color)';
   bs.backgroundColor = 'transparent';
   bs.border = '1px solid var(--accent-color)';
