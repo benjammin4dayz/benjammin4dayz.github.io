@@ -6,9 +6,11 @@
 /** ! Important ! */
 @import 'variables', 'root', 'mixins';
 /** Layout */
-@import 'media-query', 'main-layout', 'header', 'footer';
+@import 'media-query', 'main-layout', 'header', 'footer', 'card';
 /** Site Pages */
 @import 'index', 'about';
+/** Other */
+@import 'ipsum';
 
 /** TODO: Remove this */
 .text-center {

@@ -1,0 +1,23 @@
+/**
+ *! Ensure elementId matches the container class created by getLoremIpsum.js
+ *? Display pre-formatted code blocks as inset elements with scrollable content
+ */
+#loripsumContainer {
+  pre {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    width: 95%;
+    height: fit-content;
+    margin: 1rem auto;
+    border-radius: 10px;
+    padding: 0.5rem;
+    overflow: auto;
+  }
+  pre::-webkit-scrollbar {
+    height: 0.5rem;
+    background-color: var(--tertiary-color);
+  }
+  pre::-webkit-scrollbar-thumb {
+    background-color: var(--accent-color);
+  }
+}
