@@ -1,6 +1,6 @@
 ---
 title: Blog Index
-layout: default
+layout: redirect
 ---
 
 <!-- TODO:
@@ -8,20 +8,5 @@ layout: default
     Transition blog-title out of frame when scrolling through content
 ?Chore:
     Add grid container to contain blog posts as they are generated
-    Rework blog layout to incorporate unobtrusive navigation 
+    Rework blog layout to incorporate unobtrusive navigation
 -->
-<style>
-  .dolor {
-    display: block;
-    width: 80vw;
-    margin: 1.5rem auto 3rem auto;
-    overflow: hidden;
-  }
-</style>
-
-<div class="dolor">
-  <h1 class="blog-title" style="width: 100%; text-align: center">
-    Lorem Ipsum? Dolor!
-  </h1>
-  {% include ipsum.html %}
-</div>
