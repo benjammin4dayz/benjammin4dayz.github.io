@@ -25,7 +25,7 @@ class ScrollHandler {
 
   // Wrapper for asynchronous scroll to top
   _scrollToTop(scrollTime = 300) {
-    this._asyncScrollToTop(scrollTime).catch((e) => console.error(e));
+    return this._asyncScrollToTop(scrollTime).catch((e) => console.error(e));
   }
 
   // Scroll to top within a specified time
