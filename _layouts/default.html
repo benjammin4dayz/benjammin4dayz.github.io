@@ -2,12 +2,12 @@
 <html lang="en">
   {% include head.html %}
   <body class="body-color">
+    {% include scripts.html %}
     <div class="main-flex">
       {% include header.html %}
       <div class="body-container">{{ content }}</div>
       {% include footer.html %}
     </div>
-    <script src="{{ site.baseurl }}/assets/js/ScrollHandler.js"></script>
     <script>
       const scrollHandle = new ScrollHandler(
         document.querySelector('.main-flex')
