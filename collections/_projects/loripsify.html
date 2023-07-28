@@ -1,0 +1,158 @@
+---
+title: Loripsify
+layout: default
+description: >
+  An app to generate dynamic Lorem Ipsum text for your design and development projects, powered by loripsum.net/api. 
+  Easily customize the length, format, and variations of placeholder text to suit your needs. 
+  Save time and streamline your workflow by quickly generating random, realistic-looking text that simulates the appearance of real content. 
+  Perfect for prototyping and testing layouts. Loripsify the filler so that you can focus on designing and developing without the hassle of writing and formatting content.
+priority: 100
+---
+
+{% include stickyNote.html %}
+
+<div id="stickyNote">
+  <h3>Project Highlights</h3>
+  <ul style="font-size: 12px; margin: 0; padding: 0 2px 0 8px">
+    <li>Problem Solving</li>
+    <li>Clear Communication</li>
+    <li>UX-Focused Design</li>
+    <li>Efficiency & Adaptability</li>
+    <li>Creativity & Attention to Detail</li>
+  </ul>
+  Check out
+  <a href="#PLACEHOLDER">Loripsify!</a>
+</div>
+<div id="dolor">
+  <div class="papyrus">
+    <div id="dolorDemoContainer"></div>
+    <div id="tagline" class="center-block">
+      <h1>Loripsify</h1>
+      <h5>
+        Blog posts aren't static and uniform - so your Lorem Ipsum shouldn't be
+        either!
+      </h5>
+    </div>
+    <script src="{{ site.baseurl }}/assets/js/Dolor-demo.js"></script>
+    <script>
+      const startDemo = (el) => {
+        new LoremIpsumToolkit();
+        el.textContent = 'Try it!';
+        el.onclick = () => (el.textContent = 'Look Up!');
+      };
+    </script>
+    <div id="about">
+      <div id="shelfs">
+        <div id="instruction" class="flex-fit">
+          <div class="center-block">
+            <h4>How to use Loripsify?</h4>
+            <ul class="center-left-align">
+              <li><strong>Scroll</strong> over Loripsify's handle</li>
+              <li><strong>Select</strong> desired formatting options</li>
+              <li><strong>Adjust</strong> paragraph density sliders</li>
+              <li><strong>Input</strong> a container or use the default</li>
+              <li><strong>Generate</strong> and preview your document!</li>
+            </ul>
+          </div>
+        </div>
+        <div class="big-buttons center-grid">
+          <button
+            id="initProjectShowcase"
+            class="button-margin"
+            onclick="startDemo(this);"
+          >
+            Show me!
+          </button>
+          <button id="learnMoreButton" class="button-margin">
+            Learn more!
+          </button>
+        </div>
+        <div
+          id="description"
+          class="flex-fit"
+          style="max-height: min-content; display: none"
+        >
+          <h3 class="center-block" style="margin-top: 2rem">Lorip-si-who?</h3>
+          <p>
+            Loripsify is a combination of Lorem Ipsum and the suffix -ify.
+            Literally: "Make Lorem Ipsum"
+          </p>
+          <h4 class="center-block">What is <em>Loripsify</em>?</h4>
+          <p>
+            Loripsify is a tool designed to simplify your design workflow.
+            Effortlessly showcase beautiful, elegant layouts to your clients or
+            simply refine your own designs by introducing rich formatting.
+          </p>
+          <h4 class="center-block">Why use Loripsify?</h4>
+          <p>
+            As complexity increases, it quickly becomes impractical to manually
+            insert chunks of text within every individual container. Moreover,
+            using the same static passage repeatedly fails to capture the true
+            essence of your design's variability.
+          </p>
+          <p>
+            Sourcing your own documents manually is a challenging endeavor in
+            itself, let alone incorporating a method to seamlessly display them
+            in the context of your workflow.
+          </p>
+          <h4 class="center-block">How does Loripsify work?</h4>
+          <p>
+            When you click <em>generate</em>, a fetch request with the
+            appropriate endpoints is wrapped by the specified proxy and sent to
+            <a>loripsum.net/api</a>. The return value is injected into the
+            specified container using innerHTML, or a newly created container if
+            one was not given.
+          </p>
+          <div>
+            <h4 class="center-block">Proxy</h4>
+            <p>
+              Loripsum does not allow <a>Cross Origin Resource Sharing</a>, so a
+              proxy is required to bypass this restriction. The best and safest
+              option would be to use your own server to wrap the request but a
+              default option has been provided for convenience.
+            </p>
+            <span class="center-block">
+              <h3>! <u>WARNING</u> !</h3>
+              <h4>
+                DO NOT USE A PUBLIC PROXY WHEN WORKING WITH SENSITIVE DATA
+              </h4>
+            </span>
+            <p>
+              A malicious actor in control of the proxy could respond to your
+              request with an iframe or other HTML <em>(or worse)</em> capable
+              of executing code locally in your environment. Loripsify will
+              sandbox all containers before setting innerHTML in attempts to
+              mitigate this kind of attack.
+            </p>
+          </div>
+          <h4 class="center-block">Disclaimer:</h4>
+          <p>
+            This third-party app is provided as-is. Loripsify is powered by
+            <a>loripsum.net</a> but is <em>NOT</em> affiliated with, endorsed
+            by, or otherwise acknowledged by Loripsum.
+          </p>
+          <div class="big-buttons">
+            <button
+              class="center-block"
+              onclick="scrollHandle.goto.top.then.hide(this.parentNode);"
+            >
+              Return to Top
+            </button>
+          </div>
+        </div>
+      </div>
+      <script>
+        new Drawer('#about', '#learnMoreButton', '#about #shelfs #description');
+      </script>
+    </div>
+  </div>
+  <div class="papyrus">
+    <div
+      id="loremIpsum"
+      style="display: block; margin: auto; overflow: hidden"
+      sandbox
+    >
+      <!-- INJECT HERE -->
+    </div>
+  </div>
+</div>

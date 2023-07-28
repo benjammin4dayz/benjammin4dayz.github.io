@@ -1,0 +1,62 @@
+---
+title: Loripsify Concept
+layout: default
+description: A proof-of-concept project - do away with blocks of hardcoded plaintext and dynamically fetch Lorem Ipsum!
+priority: 0
+---
+
+{% include stickyNote.html %}
+<div id="stickyNote">
+  <!-- TODO: Only link to this from the full version -->
+  <h3>About: Loripsify</h3>
+  <p>
+    This is a proof-of-concept Lorem Ipsum generator powered by
+    <a href="https://loripsum.net" target="_blank">Loripsum API</a>
+  </p>
+  {% for project in site.projects %} {% if project.title == 'Loripsify' %}
+  <p>
+    Check out
+    <a href="{{ project.url }}">Loripsify!</a>
+  </p>
+  {% endif %} {% endfor %}
+</div>
+
+<style>
+  .exit-right {
+    transition: transform 0.8s;
+    transform: translatex(100vw);
+  }
+</style>
+
+<div id="conceptDolor">
+  <h1 class="blog-title" style="width: 100%; text-align: center">
+    Lorem Ipsum? Dolor!
+  </h1>
+  <script src="{{ site.url }}/assets/js/getLoremIpsum.js"></script>
+  <!--
+   ! Security Note:
+   * Sandboxed container to prevent an instance of XSS attacks in which the proxy
+   * has been compromised and attempts to respond with an iFrame or other malicious scripts.
+   * The window.innerHTML could then be leveraged to execute iFrames containing remote scripts
+   * or even locally execute the scripts within the user's environment without their knowledge.
+  -->
+  <div id="loremIpsum" sandbox>
+    <span class="text-center">
+      <p>
+        Blog posts aren't static and uniform- so your preview filler shouldn't
+        be either!
+      </p>
+      <p>
+        What if we could fetch new content then automagically display it on the
+        page as if it were a real post?
+      </p>
+    </span>
+    <button
+      id="activateDolor"
+      onclick="this.disabled=true; this.classList.add('exit-right') ; loremIpsify('loremIpsum')"
+      style="display: block; margin: auto"
+    >
+      Show Me!
+    </button>
+  </div>
+</div>

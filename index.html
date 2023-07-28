@@ -8,7 +8,8 @@ title: Home
     <h1 class="title text-center">Web Development</h1>
     <span class="subtitle text-center">Select a project to view</span>
     <div class="nav-panel">
-      {% for project in site.projects %}
+      {% assign projectPriority = site.projects | sort: 'priority' | reverse %}
+      {% for project in projectPriority %}
       <button
         class="nav-panel-btn"
         onclick="window.location.href='{{ site.baseurl }}{{ project.url }}';"

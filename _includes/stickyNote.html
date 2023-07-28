@@ -1,0 +1,83 @@
+<div id="stickyNoteContainer">
+  <style>
+    #stickyNote {
+      position: absolute;
+      z-index: 9999;
+      top: 20px;
+      left: 20px;
+      width: 200px;
+      max-height: 50vh;
+      background-color: #fffcb5;
+      padding: 20px;
+      border: 1px solid #c9c77d;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      font-size: 16px;
+      color: #4b4b4b;
+      transform: rotate(-3deg);
+      overflow: auto;
+      user-select: none;
+      opacity: 0.55;
+    }
+    #stickyNote:hover {
+      opacity: 1;
+    }
+    #stickyNote::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 20px;
+      background-color: #e6e3a1;
+    }
+    #stickyNote .exit-button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 1.5px 3px 0 0;
+      cursor: pointer;
+    }
+  </style>
+  <script>
+    // DOM manipulation to save legwork for mixins
+    document.addEventListener('DOMContentLoaded', () => {
+      let stickyNote, container;
+
+      // Get handle for #stickyNote (declared manually after this mixin)
+      try {
+        stickyNote = document.getElementById('stickyNote');
+        if (!stickyNote)
+          throw new ReferenceError('Failed to select <#stickyNote>.');
+
+        // Get handle for #stickyNoteContainer (the container for this entire mixin)
+        container = document.getElementById('stickyNoteContainer');
+        if (!container)
+          throw new ReferenceError('Failed to select <#stickyNoteContainer>.');
+
+        // Nest stickyNote within this container to keep the DOM organized
+        try {
+          container.appendChild(stickyNote);
+        } catch {
+          throw new Error`Failed to append #stickyNote to its container`();
+        }
+      } catch (e) {
+        throw e;
+      }
+
+      // Create an exit button and assign relevant props
+      const exitButton = document.createElement('span');
+
+      exitButton.className = 'exit-button';
+      exitButton.textContent = 'X';
+
+      // Make the exit button.. exit
+      exitButton.onclick = function () {
+        // Since #stickyNote was nested within #stickyNoteContainer: target grandparent element
+        this.parentNode.parentNode.remove();
+      };
+
+      // Attach the exit button to the stickyNote
+      stickyNote.prepend(exitButton);
+    });
+  </script>
+</div>

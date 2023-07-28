@@ -26,6 +26,7 @@ sass:
   style: compressed
   load_paths:
     - _sass/pages
+    - _sass/projects
 collections_dir: collections
 collections:
   projects:

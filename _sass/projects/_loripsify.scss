@@ -1,0 +1,148 @@
+// PRODUCTION LORIPSIFY
+$color_1: #333;
+$color_2: #fff;
+$background-color_1: #4e86c6;
+$background-color_2: #6ca6d4;
+$background-color_3: #8ac6e2;
+
+#dolor {
+  display: block;
+  max-width: 600px;
+  margin: 1.5rem 20vw 3rem 20vw;
+  overflow: hidden;
+  .center-left-align {
+    width: fit-content;
+    margin: auto;
+    text-align: left;
+  }
+  #tagline {
+    h1 {
+      line-height: 16px;
+      font-size: calc(6 * 1rem);
+      font-weight: 800;
+    }
+  }
+  .big-buttons {
+    button {
+      background-color: $background-color_1;
+      color: $color_2;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      box-shadow: 2px 2px 4px rgba(69, 69, 69, 0.4);
+      &:hover {
+        background-color: $background-color_2;
+      }
+      &:active {
+        background-color: $background-color_3;
+      }
+    }
+  }
+  .center-block {
+    display: block;
+    margin: auto;
+    text-align: center;
+  }
+  .center-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .button-margin {
+    margin: 25px;
+  }
+  #about {
+    .shelf-closing {
+      transition: transform 1s;
+      transform-origin: top;
+      transform: scale(0, 0);
+    }
+    .shelf-closed {
+      height: 0;
+      overflow: hidden;
+    }
+    .shelf-open {
+      height: initial;
+      overflow: initial;
+    }
+    #shelfs {
+      .flex-fit {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        max-height: min-content;
+      }
+    }
+  }
+}
+.papyrus {
+  background: linear-gradient(45deg, #f8f4e3 0%, #d9d2b4 50%, #f8f4e3 100%);
+  padding: 20px;
+  // font-size: 16px;
+  color: $color_1;
+  box-shadow: 2px 2px 8px rgba(192, 192, 192, 0.4);
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  // transform: rotate(0.07deg);
+  filter: grayscale(30%) sepia(15%);
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+}
+@media screen and (max-width: 768px) {
+  #dolor {
+    margin: 0;
+    #tagline {
+      h1 {
+        font-size: calc(3 * 1rem);
+      }
+    }
+  }
+}
+
+/**
+ ** Loripisify Preview Container DISPLAY
+ *! Ensure elementId matches the container class created by getLoremIpsum.js
+ *? Display pre-formatted code blocks as inset elements with scrollable content
+ */
+#loremIpsum {
+  pre {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    width: 95%;
+    height: fit-content;
+    margin: 1rem auto;
+    border-radius: 10px;
+    padding: 0.5rem;
+    overflow: auto;
+  }
+  pre::-webkit-scrollbar {
+    height: 0.5rem;
+    background-color: var(--tertiary-color);
+  }
+  pre::-webkit-scrollbar-thumb {
+    background-color: var(--accent-color);
+  }
+}
+
+// CONCEPT LORIPSIFY
+#conceptDolor {
+  display: block;
+  width: 80vw;
+  margin: 1.5rem auto 3rem auto;
+  overflow: hidden;
+  #activateDolor {
+    width: 100px;
+    height: 50px;
+    border: 1px solid var(--accent-color);
+    color: var(--text-color);
+    background-color: var(--secondary-color);
+    border-radius: 5px;
+  }
+  #activateDolor:hover {
+    font-weight: 800;
+    border: 3px solid var(--accent-color);
+  }
+  #activateDolor:active {
+    transform: scale(0.95);
+    background-color: var(--accent-color);
+  }
+}
