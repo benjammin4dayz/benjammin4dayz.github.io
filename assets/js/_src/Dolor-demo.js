@@ -1,4 +1,4 @@
-class LoremIpsumToolkit {
+export default class DolorDemo {
   constructor() {
     this.api = 'https://loripsum.net/api/';
     this.defaultProxy = 'https://corsproxy.io/?';

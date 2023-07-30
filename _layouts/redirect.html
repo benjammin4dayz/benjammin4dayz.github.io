@@ -40,9 +40,8 @@
           >[ The resource you requested has recently moved elsewhere. ]</span
         >
         <h3 class="text-center">Redirecting you now...</h3>
-        <script src="{{ site.baseurl }}/assets/js/redirectHandler.js"></script>
         <script>
-          redirectHandler(5000);
+          Bundle.Site.navigate.to('/').after(3000);
         </script>
         {% include catify.html %}
       </div>

@@ -2,14 +2,13 @@
 <html lang="en">
   {% include head.html %}
   <body class="body-color">
-    {% include scripts.html %}
     <div class="main-flex">
       {% include header.html %}
       <div class="body-container">{{ content }}</div>
       {% include footer.html %}
     </div>
     <script>
-      const scrollHandle = new ScrollHandler(
+      const scrollHandle = new Bundle.ScrollHandler(
         document.querySelector('.main-flex')
       );
     </script>

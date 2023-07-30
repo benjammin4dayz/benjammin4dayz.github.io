@@ -31,14 +31,6 @@ priority: 100
         either!
       </h5>
     </div>
-    <script src="{{ site.baseurl }}/assets/js/Dolor-demo.js"></script>
-    <script>
-      const startDemo = (el) => {
-        new LoremIpsumToolkit();
-        el.textContent = 'Try it!';
-        el.onclick = () => (el.textContent = 'Look Up!');
-      };
-    </script>
     <div id="about">
       <div id="shelfs">
         <div id="instruction" class="flex-fit">
@@ -139,9 +131,6 @@ priority: 100
           </div>
         </div>
       </div>
-      <script>
-        new Drawer('#about', '#learnMoreButton', '#about #shelfs #description');
-      </script>
     </div>
   </div>
   <div class="papyrus">
@@ -154,3 +143,15 @@ priority: 100
     </div>
   </div>
 </div>
+<script>
+  new Bundle.Drawer(
+    '#about',
+    '#learnMoreButton',
+    '#about #shelfs #description'
+  );
+  const startDemo = (el) => {
+    new Bundle.dolor.prod();
+    el.textContent = 'Try it!';
+    el.onclick = () => (el.textContent = 'Look Up!');
+  };
+</script>

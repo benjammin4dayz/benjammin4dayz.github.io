@@ -207,3 +207,5 @@ function debounceClick(func, delay, button) {
     }
   };
 }
+
+export { loremIpsify, moremIpsify };

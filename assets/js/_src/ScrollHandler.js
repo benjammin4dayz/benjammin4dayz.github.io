@@ -1,4 +1,4 @@
-class ScrollHandler {
+export default class ScrollHandler {
   // ScrollHandler.goto.top.now()
   // ScrollHandler.goto.top.then.hide();
   constructor(body) {

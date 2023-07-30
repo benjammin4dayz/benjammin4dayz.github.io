@@ -14,7 +14,7 @@
  * @class
  * @constructor
  */
-class Drawer {
+export default class Drawer {
   /**
    * Creates an instance of the Drawer class.
    *
