@@ -28,11 +28,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Install npm dependencies
-        uses: npm i
+        run: npm i
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - name: Bundle JS files
-        uses: npm run rollup
+        run: npm run rollup
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
         with:
