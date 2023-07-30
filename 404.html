@@ -3,12 +3,72 @@ layout: default
 title: 404
 ---
 
-<!-- Inspired by Reddit's "page not found" -->
-<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/404.css" />
+<style>
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 4rem;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .links a {
+    color: var(--tertiary-color);
+    text-decoration: none;
+    margin: 0.5rem;
+    padding: 0.5rem 1rem;
+    border: 2px solid var(--tertiary-color);
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+  }
+
+  .links a:hover {
+    background-color: var(--tertiary-color);
+    color: var(--text-color);
+  }
+
+  #catContainer {
+    overflow: hidden;
+    margin-bottom: 5rem;
+  }
+  #catContainer .adjust {
+    width: 250px;
+    height: 250px;
+  }
+  #catContainer .border {
+    border: 3px solid var(--accent-color);
+    border-radius: 25%;
+    box-shadow: 0px 2px 4px var(--text-color);
+  }
+</style>
 <div class="container">
-  {% include catify.html %}
-  <h3 class="text-center">page not found</h3>
-  <span class="description text-center"
-    >the page you requested does not exist.</span
-  >
+  <h1>Oops! Page Not Found</h1>
+  <div id="catContainer">
+    <img class="adjust border" src="{{ site.baseurl }}/assets/img/cat.png" />
+  </div>
+  <div class="links">
+    <a href="/">Home</a>
+    <a href="/about">About</a>
+    <a href="/contact">Contact</a>
+    <a href="/blog">Blog</a>
+  </div>
 </div>
