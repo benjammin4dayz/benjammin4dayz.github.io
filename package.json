@@ -1,0 +1,14 @@
+{
+  "type": "module",
+  "scripts": {
+    "rollup": "rollup -c"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2",
+    "prettier": "^2.5.1",
+    "eslint": "^8.7.0"
+  },
+  "dependencies": {
+    "rollup": "^3.27.0"
+  }
+}
