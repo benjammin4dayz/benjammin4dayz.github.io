@@ -1,4 +1,4 @@
-name: Deploy Jekyll with GitHub Pages dependencies preinstalled
+name: Rollup scripts and deploy Jekyll with GitHub Pages dependencies preinstalled
 
 on:
   # Runs on pushes targeting the default branch
@@ -36,6 +36,8 @@ jobs:
         with:
           source: ./
           destination: ./_site
+      - name: Bundle JS files
+        run: npm run rollup
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
 
