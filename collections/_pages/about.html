@@ -5,10 +5,19 @@ title: About
 
 <div class="about-page">
   <div class="container">
-    <span class="heading">Doing my own webdev.</span>
-    <span id="hidden-message-trigger" class="sub-heading">With Blackjack!</span>
-    <span id="hidden-message" class="sotto-voce">... and hookers!</span>
+    <h1 class="bold text-center">About this website</h1>
+    <p class="text-center">In early 2023...</p>
+    <p class="text-center">
+      I embarked on my programming journey with limited prior experience. It was
+      during this time that I discovered the game "Bitburner," which served as a
+      catalyst for my passion for programming. With JavaScript as my vessel, I
+      set course to become a proficient full-stack web developer.
+    </p>
+    <p class="text-center">
+      This site effectively serves as my playground and portfolio.
+    </p>
     <div class="build-info">
+      <h2>About this build</h2>
       <i
         class="fab fa-github"
         title="Click here to view the source code for this website"
@@ -41,17 +50,4 @@ title: About
       </span>
     </div>
   </div>
-  <script>
-    function revealHiddenOnHover() {
-      const trigger = document.getElementById('hidden-message-trigger');
-      const hiddenMessage = document.getElementById('hidden-message');
-      trigger.addEventListener('mouseover', () => {
-        hiddenMessage.style.opacity = 1;
-      });
-      trigger.addEventListener('mouseout', () => {
-        hiddenMessage.style.opacity = 0;
-      });
-    }
-    revealHiddenOnHover();
-  </script>
 </div>
