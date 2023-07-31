@@ -10,9 +10,9 @@ body {
 
 .body-container {
   display: flex;
-  flex: 0.93 0 0;
+  flex: 1 0 0;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   // margin: 4rem 3.2rem 4rem 3.2rem;
 }
 
