@@ -2,6 +2,7 @@
   .layout-header {
     display: flex;
     flex-shrink: 0;
+    overflow: hidden;
     height: 66px;
     background-color: var(--secondary-color);
     .logo {
@@ -11,6 +12,12 @@
       margin: auto 32px;
       font-size: 24px;
       font-weight: 800;
+    }
+
+    @media screen and (max-width: 480px) {
+      .logo {
+        display: none;
+      }
     }
 
     nav {
