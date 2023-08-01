@@ -9,7 +9,7 @@
 # in the templates via {{ site.myvariable }}.
 
 # Config
-title: Benjammin4dayz # The name of the site
+title: Jam.Dev(this); # The name of the site
 description: Doing my own web dev. With Blackjack! # The description of the site; this is displayed in search engine results
 baseurl: '' # the subpath of your site, e.g. /blog
 url: 'https://benjammin4dayz.github.io' # the base hostname & protocol for your site, e.g. http://example.com
@@ -67,3 +67,4 @@ exclude:
   - .github/
   - .gitignore
   - _projects/hyde/
+  - rollup.config.js
