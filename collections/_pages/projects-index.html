@@ -1,0 +1,24 @@
+---
+layout: default
+title: Project Index
+---
+
+<!-- TODO: rework this page -->
+<div class="container" style="margin: auto">
+  <h1 class="title text-center">Web Development</h1>
+  <span class="subtitle text-center">Select a project to view</span>
+  <div class="nav-panel">
+    {% assign projectPriority = site.projects | sort: 'priority' | reverse %} {%
+    for project in projectPriority %}
+    <button
+      class="nav-panel-btn"
+      onclick="window.location.href='{{ site.baseurl }}{{ project.url }}';"
+    >
+      {{ project.title }}
+    </button>
+    {% endfor %}
+  </div>
+  <script>
+    Bundle.Site.stinkyPage;
+  </script>
+</div>

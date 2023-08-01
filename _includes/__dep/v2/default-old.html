@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% include head.html %}
+  <body class="body-color">
+    <div class="main-flex">
+      {% include header.html %}
+      <div class="body-container">{{ content }}</div>
+      {% include footer.html %}
+    </div>
+    <script>
+      const scrollHandle = new Bundle.ScrollHandler(
+        document.querySelector('.main-flex')
+      );
+    </script>
+  </body>
+</html>

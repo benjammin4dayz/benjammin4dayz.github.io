@@ -10,25 +10,24 @@
   }
 
   .nav-panel {
+    /* border: 10px solid #0000003b; */
+    box-shadow: 2px 2px 25px rgba(46, 45, 45, 0.3);
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: 0.5rem;
     width: fit-content;
     max-width: 60vw;
     margin: 5vh auto;
-    /* border: 10px solid #0000003b; */
-    box-shadow: 2px 2px 25px rgba(46, 45, 45, 0.3),
-      -2px -2px 25px rgba(134, 129, 129, 0.3);
   }
 
   .nav-panel-btn {
-    padding: 1rem 2rem;
     margin: 0.1rem;
+    padding: 1rem 2rem;
     background-color: var(--secondary-color);
-    color: var(--text-color);
     border: none;
     border-radius: 4px;
     font-size: 1rem;
+    color: var(--text-color);
   }
   .nav-panel-btn:hover {
     background-color: var(--tertiary-color);

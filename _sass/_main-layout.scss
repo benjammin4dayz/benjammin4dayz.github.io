@@ -1,44 +1,25 @@
 @charset "utf-8";
 
-html,
 body {
-  height: 100vh;
   margin: 0;
-  padding: 0;
-  overflow: auto;
+  background-color: #333;
 }
 
-.body-container {
+#layout {
   display: flex;
-  flex: 1 0 0;
-  justify-content: center;
-  align-items: flex-start;
-  // margin: 4rem 3.2rem 4rem 3.2rem;
-}
-
-// .body-content {
-//   display: flex;
-//   flex-wrap: wrap;
-//   word-break: break-word;
-//   padding: 0 1.5rem;
-//   align-self: flex-start;
-// }
-
-.main-flex {
-  display: flex;
-  flex-direction: column;
+  width: 100vw;
   height: 100vh;
-  overflow: auto;
-}
-
-.body-color {
   background-color: var(--primary-color);
-}
 
-.endcap-color {
-  background-color: var(--secondary-color);
-}
+  #contentWindow {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    overflow: auto;
 
-.text-center {
-  text-align: center;
+    .liquid {
+      display: flex;
+      flex: 1;
+    }
+  }
 }

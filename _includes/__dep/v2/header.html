@@ -1,6 +1,5 @@
-<div id="layoutHeader" class="layout-header">
-  <div class="logo">{{ site.title }}</div>
-  <nav>
+<div class="header-container endcap-color">
+  <div class="header-nav-container">
     <button
       aria-label="Navigate to page - Home"
       tabindex="0"
@@ -21,12 +20,12 @@
       aria-label="Navigate to page - Blog"
       tabindex="0"
       class="header-nav-btn"
-      onclick="this.style.filter = 'blur(2px)'"
+      onclick="window.location.href = '/blog'"
     >
       Blog
     </button>
-    <button onclick="this.style.filter = 'blur(2px)'">
-      <i class="fas fa-moon fa-lg"></i>
+    <button id="devButton" class="header-nav-btn" onclick="alert(`(ㆆ _ ㆆ)`)">
+      DO NOT CLICK
     </button>
-  </nav>
+  </div>
 </div>
