@@ -109,6 +109,32 @@ class Events extends Base {
     };
   }
 
+  static get randomizeBorders() {
+    // TODO: Improve or Remove
+    // getELementById alias
+    const getEl = (element) => document.getElementById(element);
+    // List of element ids to modify
+    //! Hardcoded values! Must improve modularity for ID (and colors at a lower priority)
+    const id = ['layoutHeader', 'layoutFooter'];
+    // List of colors to apply to the elements
+    const colors = [
+      '#FF0000',
+      '#FFA500',
+      '#FFFF00',
+      '#00FF00',
+      '#0000FF',
+      '#8A2BE2'
+    ];
+    // Get a random color using Math.random()
+    const rng = () => Math.floor(Math.random() * colors.length);
+    const randomColor = colors[rng()];
+    // Get a handle to relevant element
+    const [header, footer] = [getEl(id[0]), getEl(id[1])];
+    // Apply the random color to the elements
+    header.style.borderBottom = `3px solid ${randomColor}`;
+    footer.style.borderTop = `3px solid ${randomColor}`;
+  }
+
   invoke(callback) {
     return {
       on: (type) => this.element.addEventListener(type, callback)
@@ -125,7 +151,7 @@ class Events extends Base {
   static _attempt(callback, rescue) {
     let result;
     try {
-      result = callback();
+      result = callback;
       return result;
     } catch (e) {
       // Call 'DNR' re-throw the error into the stack
@@ -151,9 +177,15 @@ class Site extends Base {
   static events(element) {
     return new Events(element);
   }
-  static flair(text) {
-    if (!text) text = 'COME TO BRAZIL!';
-    console.log(`Site.flair: ${text}`);
+  static flair() {
+    /**
+     * ! WARNING ! Experimental Feature for TESTING only
+     * * Wait for DOM otherwise footer doesn't exist
+     * Bundle.Site.events(document)
+     * .invoke(() => Bundle.Site.flair())
+     * .on('DOMContentLoaded');
+     */
+    return Events.randomizeBorders;
   }
 }
 
