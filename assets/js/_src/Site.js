@@ -1,4 +1,5 @@
 import ThemeSwitch from './ThemeSwitch.js';
+import Loripsify from './Loripsify.js';
 
 class Base {
   // Site Utility Functions shared between EVERY class
@@ -191,6 +192,9 @@ class Site extends Base {
   }
   static lightSwitch(trigger) {
     return new ThemeSwitch(trigger);
+  }
+  static fill() {
+    return new Loripsify();
   }
 }
 

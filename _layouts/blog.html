@@ -1,43 +1,42 @@
-<html lang="en">
+<!DOCTYPE html>
+<html>
   {% include head.html %}
-  <style>
-    .layout-flex-container {
-      display: flex;
-      flex-direction: column;
-    }
-    .sidebar {
-      display: flex;
-      max-width: min-content;
-    }
-    .content {
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-      margin: 0 auto;
-      overflow: auto;
-    }
-  </style>
-  <body id="layout-body" style="margin: 0; padding: 0">
-    <div class="layout-flex-container">
-      <!-- Layout Wrapper -->
-      {% include header.html %}
-      <div class="content-container" style="display: flex; height: 100vh">
-        <div class="sidebar">{% include sidebar-nav.html %}</div>
-        <!-- Blog Content Wrapper -->
-        <div class="content">
-          <h1 class="blog-title text-center">
-            {{ page.title }}
-            <hr />
-          </h1>
-          {{ content }}
+  <body>
+    <style>
+      #sidebarContainer {
+        overflow: auto;
+        width: 50px;
+        transition: width 0.3s ease;
+        background-color: var(--secondary-color);
+      }
+      #layout .sidebar-open {
+        width: 240px !important;
+      }
+      #layout #sidebarHandle {
+        height: 30px;
+        width: 30px;
+        margin: 10px;
+        background-color: transparent;
+      }
+    </style>
+    <div id="layout">
+      <div id="sidebarContainer">
+        <div style="display: flex; justify-content: flex-end">
+          <button
+            id="sidebarHandle"
+            title="Toggle the sidebar menu"
+            onclick="document.getElementById('sidebarContainer').classList.toggle('sidebar-open')"
+          >
+            |<i class="fas fa-arrow-right"></i>
+          </button>
         </div>
-        <!-- Blog Content Wrapper End -->
       </div>
-      {% include footer.html %}
-      <!-- Layout Wrapper End -->
+      <div id="contentWindow">
+        {% include header.html %}
+        <div class="liquid">{{ content }}</div>
+        {% include footer.html %}
+      </div>
     </div>
-    <script>
-      Bundle.Site.stinkyPage;
-    </script>
+    {% include scripts.html %}
   </body>
 </html>

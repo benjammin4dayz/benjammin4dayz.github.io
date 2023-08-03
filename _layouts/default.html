@@ -9,11 +9,6 @@
         {% include footer.html %}
       </div>
     </div>
-    <script>
-      Bundle.Site.lightSwitch('themeToggleButton');
-      const scrollHandle = new Bundle.ScrollHandler(
-        document.getElementById('contentWindow')
-      );
-    </script>
+    {% include scripts.html %}
   </body>
 </html>
