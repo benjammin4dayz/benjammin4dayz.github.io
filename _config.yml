@@ -10,7 +10,7 @@
 
 # Config
 title: Jam.Dev(this); # The name of the site
-description: Doing my own web dev. With Blackjack! # The description of the site; this is displayed in search engine results
+description: My personal website showcasing my portfolio and other web development-related content.
 baseurl: '' # the subpath of your site, e.g. /blog
 url: 'https://benjammin4dayz.github.io' # the base hostname & protocol for your site, e.g. http://example.com
 
