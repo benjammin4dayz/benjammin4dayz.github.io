@@ -7,9 +7,9 @@ $background-color_3: #8ac6e2;
 
 #dolor {
   display: block;
+  overflow: hidden;
   width: 75%;
   margin: 1.5rem auto 3rem auto;
-  overflow: hidden;
   .center-left-align {
     width: fit-content;
     margin: auto;
@@ -17,13 +17,10 @@ $background-color_3: #8ac6e2;
   }
   #tagline {
     h1 {
-      line-height: 16px;
       font-size: calc(6 * 1rem);
       font-weight: 800;
+      line-height: 16px;
     }
-  }
-  p {
-    text-align: center;
   }
 
   .big-buttons {
@@ -31,13 +28,13 @@ $background-color_3: #8ac6e2;
     height: 100px;
     margin: 1rem auto;
     button {
-      background-color: $background-color_1;
-      color: $color_2;
+      box-shadow: 2px 2px 4px rgba(69, 69, 69, 0.4);
       padding: 10px 20px;
+      background-color: $background-color_1;
+      cursor: pointer;
       border: none;
       border-radius: 5px;
-      cursor: pointer;
-      box-shadow: 2px 2px 4px rgba(69, 69, 69, 0.4);
+      color: $color_2;
       &:hover {
         background-color: $background-color_2;
       }
@@ -60,19 +57,25 @@ $background-color_3: #8ac6e2;
   }
   #about {
     .shelf-closing {
-      transition: transform 1s;
       transform-origin: top;
       transform: scale(0, 0);
+      transition: transform 1s;
     }
     .shelf-closed {
-      height: 0;
       overflow: hidden;
+      height: 0;
     }
     .shelf-open {
-      height: initial;
       overflow: initial;
+      height: initial;
     }
     #shelfs {
+      #description {
+        p {
+          text-align: center;
+        }
+      }
+
       .flex-fit {
         display: flex;
         flex-direction: column;
@@ -83,15 +86,15 @@ $background-color_3: #8ac6e2;
   }
 }
 .papyrus {
-  background: linear-gradient(45deg, #f8f4e3 0%, #d9d2b4 50%, #f8f4e3 100%);
-  padding: 20px;
   // font-size: 16px;
-  color: $color_1;
   box-shadow: 2px 2px 8px rgba(192, 192, 192, 0.4);
-  border: 1px solid #ccc;
-  border-radius: 5px;
   // transform: rotate(0.07deg);
   filter: grayscale(30%) sepia(15%);
+  padding: 20px;
+  background: linear-gradient(45deg, #f8f4e3 0%, #d9d2b4 50%, #f8f4e3 100%);
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  color: $color_1;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
 }
 @media screen and (max-width: 768px) {
@@ -114,14 +117,14 @@ $background-color_3: #8ac6e2;
  */
 #loremIpsum {
   pre {
-    background-color: var(--secondary-color);
-    color: var(--text-color);
+    overflow: auto;
     width: 95%;
     height: fit-content;
     margin: 1rem auto;
-    border-radius: 10px;
     padding: 0.5rem;
-    overflow: auto;
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+    color: var(--text-color);
   }
   pre::-webkit-scrollbar {
     height: 0.5rem;
@@ -135,20 +138,20 @@ $background-color_3: #8ac6e2;
 // CONCEPT LORIPSIFY
 #conceptDolor {
   display: block;
+  overflow: hidden;
   width: 80vw;
   margin: 1.5rem auto 3rem auto;
-  overflow: hidden;
   #activateDolor {
     width: 100px;
     height: 50px;
-    border: 1px solid var(--accent-color);
-    color: var(--text-color);
     background-color: var(--secondary-color);
+    border: 1px solid var(--accent-color);
     border-radius: 5px;
+    color: var(--text-color);
   }
   #activateDolor:hover {
-    font-weight: 800;
     border: 3px solid var(--accent-color);
+    font-weight: 800;
   }
   #activateDolor:active {
     transform: scale(0.95);
