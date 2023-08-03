@@ -1,4 +1,4 @@
-import ThemeSwitcher from './ThemeSwitcher.js';
+import ThemeSwitch from './ThemeSwitcher.js';
 
 class Base {
   // Site Utility Functions shared between EVERY class
@@ -190,7 +190,7 @@ class Site extends Base {
     return Events.randomizeBorders;
   }
   static lightSwitch(trigger) {
-    return new ThemeSwitcher(trigger);
+    return new ThemeSwitch(trigger);
   }
 }
 

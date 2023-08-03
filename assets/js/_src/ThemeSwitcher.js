@@ -1,45 +1,46 @@
-export default class ThemeSwitcher {
+export default class ThemeSwitch {
   constructor(trigger) {
     this.themes = ['light-theme-override', 'dark-theme-override'];
+    this.memoKey = 'ThemeSwitch';
     this._init(trigger);
   }
 
   _init(element) {
     element = document.getElementById(element);
     if (!element) throw ReferenceError('Element not found');
-    element.addEventListener('click', () => this._overrideTheme());
-    this._enforceTheme();
+    element.addEventListener('click', () => this._override());
+    this._enforce();
   }
 
-  _overrideTheme() {
-    const activeOverride = sessionStorage.getItem('themeOverride');
-
-    if (activeOverride) {
-      this._toggleClass(activeOverride);
-      sessionStorage.removeItem('themeOverride');
+  _override() {
+    if (this._memory) {
+      this._toggle(this._memory);
+      this._forget();
       return;
     }
 
     const override = window.matchMedia('(prefers-color-scheme: dark)').matches
-      ? this._rememberThis(this.themes[0])
-      : this._rememberThis(this.themes[1]);
+      ? this._memorize(this.themes[0])
+      : this._memorize(this.themes[1]);
 
-    this._toggleClass(override);
+    this._toggle(override);
   }
 
-  _enforceTheme() {
-    const themeOverride = sessionStorage.getItem('themeOverride');
-    if (themeOverride) {
-      this._toggleClass(themeOverride);
-      return true;
-    }
+  _enforce() {
+    if (this._memory) this._toggle(this._memory);
   }
-  _toggleClass(targetClass) {
+
+  get _memory() {
+    return sessionStorage.getItem(this.memoKey);
+  }
+  _toggle(targetClass) {
     document.body.classList.toggle(targetClass);
   }
-
-  _rememberThis(theme) {
-    sessionStorage.setItem('themeOverride', theme);
+  _memorize(theme) {
+    sessionStorage.setItem(this.memoKey, theme);
     return theme;
+  }
+  _forget() {
+    sessionStorage.removeItem(this.memoKey);
   }
 }
