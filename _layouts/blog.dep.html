@@ -1,0 +1,43 @@
+<html lang="en">
+  {% include head.html %}
+  <style>
+    .layout-flex-container {
+      display: flex;
+      flex-direction: column;
+    }
+    .sidebar {
+      display: flex;
+      max-width: min-content;
+    }
+    .content {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      margin: 0 auto;
+      overflow: auto;
+    }
+  </style>
+  <body id="layout-body" style="margin: 0; padding: 0">
+    <div class="layout-flex-container">
+      <!-- Layout Wrapper -->
+      {% include header.html %}
+      <div class="content-container" style="display: flex; height: 100vh">
+        <div class="sidebar">{% include sidebar-nav.html %}</div>
+        <!-- Blog Content Wrapper -->
+        <div class="content">
+          <h1 class="blog-title text-center">
+            {{ page.title }}
+            <hr />
+          </h1>
+          {{ content }}
+        </div>
+        <!-- Blog Content Wrapper End -->
+      </div>
+      {% include footer.html %}
+      <!-- Layout Wrapper End -->
+    </div>
+    <script>
+      Bundle.Site.stinkyPage;
+    </script>
+  </body>
+</html>
