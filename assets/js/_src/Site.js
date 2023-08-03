@@ -1,4 +1,4 @@
-import ThemeSwitch from './ThemeSwitcher.js';
+import ThemeSwitch from './ThemeSwitch.js';
 
 class Base {
   // Site Utility Functions shared between EVERY class
