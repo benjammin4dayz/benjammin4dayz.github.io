@@ -6,6 +6,7 @@
     height: 66px;
     background-color: var(--secondary-color);
     .logo {
+      color: var(--text-color);
       user-select: none;
       flex-basis: 0;
       flex: 0.1;

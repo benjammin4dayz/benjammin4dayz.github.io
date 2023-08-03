@@ -23,3 +23,14 @@ body {
     }
   }
 }
+
+.light-theme-override {
+  @each $key, $value in $theme-light {
+    --#{$key}: #{$value};
+  }
+}
+.dark-theme-override {
+  @each $key, $value in $theme-dark {
+    --#{$key}: #{$value};
+  }
+}

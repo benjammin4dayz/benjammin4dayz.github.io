@@ -1,3 +1,5 @@
+import ThemeSwitcher from './ThemeSwitcher.js';
+
 class Base {
   // Site Utility Functions shared between EVERY class
   constructor() {}
@@ -186,6 +188,9 @@ class Site extends Base {
      * .on('DOMContentLoaded');
      */
     return Events.randomizeBorders;
+  }
+  static lightSwitch(trigger) {
+    return new ThemeSwitcher(trigger);
   }
 }
 
