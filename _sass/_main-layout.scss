@@ -1,8 +1,10 @@
 @charset "utf-8";
 
+html,
 body {
   margin: 0;
   background-color: #333;
+  overflow: hidden;
 }
 
 #layout {
@@ -16,7 +18,8 @@ body {
     display: flex;
     flex-direction: column;
     flex: 1;
-    overflow: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
 
     .liquid {
       display: flex;
